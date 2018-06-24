@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="lazyload" lang="en">
+    <head>
+        <title>concepts · Networq</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                <link rel="icon" type="image/png" href="/icon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share:400|Jaldi:400,700|Fira+Mono:400,700">
+        <link rel="stylesheet" href="/assets/base.css">
+        <link rel="stylesheet" href="/assets/lindoc.css">
+        <style>
+            a,.results strong{color:#d21}
+            button,input[type=submit],input[type=button],input[type=reset],.button,.search input[type=submit]{background-color:#d21}
+            .search input[type=text]:focus,.results,.results strong{border-color:#d21 !important}
+            @media screen and (min-width:1450px){.livetoc a.active{ color:#d21}}
+        </style>
+        <script>
+            // Parent Elements - e.P("body") - https://gist.github.com/moqmar/0995cf6595201f7a062fb173cb4ab938
+            (function(E){E.matches||(E.matches=E.matchesSelector||E.msMatchesSelector||E.webkitMatchesSelector)})(Element.prototype)
+            Element.prototype.P=function(s){var e=this
+            if(!s||typeof s=="number")for(var i=0;i<(s||1);i++)e=e?e.parentElement:e
+            else if(typeof s=="string")while(e&&!e.matches(s))e=e.parentElement
+            else while(e&&e!=s)e=e.parentElement
+            return e}
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="/"><img src="https://avatars3.githubusercontent.com/u/40381856?s=200&amp;v=4" alt="Networq"></a>
+            </h1>
+            <!-- THIS DOCUMENT IS INDEXED -->
+            <div class="search" role="search"><form data-baseurl="" onsubmit="search(this); return false;">
+                <input type="text" class="search-query" oninput="search(this.parentElement)" placeholder="Search...">
+                <input type="submit" value="➜">
+            </form><div class="results"></div></div>
+            <nav class="breadcrumbs">
+                <a href="/">Networq</a> » <strong>concepts</strong>
+            </nav>
+        </header>
+
+        <main>
+            <aside class="toc"><ul></ul></aside>
+            <article>
+                <template search-description></template>
+
+<!-- CONTENT START -->
+<h1 id="concepts">Concepts</h1>
+<p>Networq uses a few concepts you need to understand in order to build your own graphs.
+Below you'll find definitions for Networq's terms:</p>
+<h2 id="node">Node</h2>
+<p>All data in Networq is a &quot;Node&quot;. A node has a name (i.e. <code>mario</code>). Every node is part of a package (i.e. <code>acme:example</code>). The node name and the package name combined give a Fully Qualified Node Name (FQNN) (i.e. <code>acme:example:mario</code>).</p>
+<p>Other than the name/fqnn, a node doesn't have any properties of it's own. A Node can be tagged with one or more Types, which give the node it's available properties. For example, tagging the <code>acme:example:mario</code> node with the <code>acme:example:character</code> type allows you to specify the <code>debut</code> field for Mario, linking it to the game that Mario debuted in.</p>
+<h2 id="types">Types</h2>
+<p>A &quot;Type&quot; defines what properties a Node can have. A type has a name (i.e. <code>vegetable</code>) and is part of a package (i.e. <code>acme:food</code>). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. <code>acme:food:vegetable</code>).</p>
+<p>Types are defined by creating <code>.yaml</code> files in the <code>types/</code> directory of a package. They are automatically loaded when the package is loaded.</p>
+<p>Types optionally define a list of Fields for the type. Only nodes tagged with this type will have the listed fields.</p>
+<p>A Field can be either a <code>string</code> (simple text), or a FQTN. When you specify a FQTN for a Field, you
+can only assign nodes that are tagged with this type.</p>
+<p>A Field can be a single value (default), or a list of values (by appending [] to the end of the Field type definition).</p>
+<h2 id="tags">Tags</h2>
+<p>A &quot;Tag&quot; is simply the link between a Node and a Type. One Node can contain multiple Tags.</p>
+<h2 id="package">Package</h2>
+<p>A &quot;Package&quot; is a reusable set of Types and Nodes. Packages can be shared and live in their own Git Repository.</p>
+<p>A Package defines Types (in the package's <code>types/</code> directory) using YAML files.</p>
+<p>A Package can optionally define a set of <code>Nodes</code>. Nodes in packages are therefor also reusable and lets you share reference data or standardized lists (like countries, operating systems, etc).</p>
+<p>A Package can optionally define <code>Widgets</code>, which are simple HTML templates (in the <code>templates/</code> directory) which get injected into the User Interface when a user is viewing a Node of a given Type.</p>
+<p>A Package always has a <code>package.yaml</code> file in the root of it's repository.
+The <code>package.yaml</code> file defines the Package's name, description, license etc. And lists an optional set
+of dependencies: other packages that this package depends on.</p>
+<h2 id="graph">Graph</h2>
+<p>When using Networq, you'll almost always interact with a &quot;Graph&quot;. A Graph is a container for one or more Packages and their contents (Nodes, Types, Widgets).</p>
+<p>A Graph always has exactly 1 &quot;Root Package&quot; which is the main package of your project. Additionally the graph recursively loads and holds all packages that a parent package has a dependency on.</p>
+<!-- CONTENT END -->
+
+            </article>
+        </main>
+
+        <script src="/assets/toc.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script>Prism.plugins.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/";</script>
+        <link rel="stylesheet" href="/assets/prism.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/js-search@1.4.2/dist/umd/js-search.min.js"></script>
+        <script src="/assets/search.js"></script>
+    </body>
+</html>

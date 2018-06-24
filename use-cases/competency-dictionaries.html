@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="lazyload" lang="en">
+    <head>
+        <title>competency-dictionaries · Networq</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                <link rel="icon" type="image/png" href="/icon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share:400|Jaldi:400,700|Fira+Mono:400,700">
+        <link rel="stylesheet" href="/assets/base.css">
+        <link rel="stylesheet" href="/assets/lindoc.css">
+        <style>
+            a,.results strong{color:#d21}
+            button,input[type=submit],input[type=button],input[type=reset],.button,.search input[type=submit]{background-color:#d21}
+            .search input[type=text]:focus,.results,.results strong{border-color:#d21 !important}
+            @media screen and (min-width:1450px){.livetoc a.active{ color:#d21}}
+        </style>
+        <script>
+            // Parent Elements - e.P("body") - https://gist.github.com/moqmar/0995cf6595201f7a062fb173cb4ab938
+            (function(E){E.matches||(E.matches=E.matchesSelector||E.msMatchesSelector||E.webkitMatchesSelector)})(Element.prototype)
+            Element.prototype.P=function(s){var e=this
+            if(!s||typeof s=="number")for(var i=0;i<(s||1);i++)e=e?e.parentElement:e
+            else if(typeof s=="string")while(e&&!e.matches(s))e=e.parentElement
+            else while(e&&e!=s)e=e.parentElement
+            return e}
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="/"><img src="https://avatars3.githubusercontent.com/u/40381856?s=200&amp;v=4" alt="Networq"></a>
+            </h1>
+            <!-- THIS DOCUMENT IS INDEXED -->
+            <div class="search" role="search"><form data-baseurl="" onsubmit="search(this); return false;">
+                <input type="text" class="search-query" oninput="search(this.parentElement)" placeholder="Search...">
+                <input type="submit" value="➜">
+            </form><div class="results"></div></div>
+            <nav class="breadcrumbs">
+                <a href="/">Networq</a> » <a href="/use-cases/">use-cases</a> » <strong>competency-dictionaries</strong>
+            </nav>
+        </header>
+
+        <main>
+            <aside class="toc"><ul></ul></aside>
+            <article>
+                <template search-description></template>
+
+<!-- CONTENT START -->
+<h1 id="use-case-competency-dictionaries">Use-case: Competency dictionaries</h1>
+<p>Define your own dictionaries listing competencies and their associated levels. Package them up in reusable lists and easily attach them to job postings, projects or even individual actions.</p>
+<p>Tag your team members with a competency profile to keep track of their current levels, target levels and notes of their evaluations.</p>
+<p>Competency dictionaries can be packaged up for re-use between companies. Company A can publish a beautiful &quot;Communication specialist&quot; competency dictionary, while Company B publishes a &quot;Customer service&quot; competency dictionary. Any company can now import (define a dependency on) these competency dictionary packages and start using them in their business.</p>
+<p>Shareable competency dictionaries have a number of benefits:</p>
+<ul>
+<li>No need to re-invent the wheel. Just use existing dictionaries where available, and only define your organization-specific competencies yourself.</li>
+<li>Use the best dictionaries designed by domain expers from other organizations.</li>
+<li>Mix and match to cherry pick specific competency definitions.</li>
+<li>Dictionaries can be automatically updated so you'll get maintenance updates and enhancements for free.</li>
+<li>Collaborate with other domain experts on competency dictionaries on GitHub/GitLab/etc.</li>
+</ul>
+<p>Build supportive dictionaries by attaching learning resources for each competency level to support
+team-members in leveling up.</p>
+<!-- CONTENT END -->
+
+            </article>
+        </main>
+
+        <script src="/assets/toc.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script>Prism.plugins.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/";</script>
+        <link rel="stylesheet" href="/assets/prism.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/js-search@1.4.2/dist/umd/js-search.min.js"></script>
+        <script src="/assets/search.js"></script>
+    </body>
+</html>

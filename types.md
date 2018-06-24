@@ -1,7 +1,0 @@
----
-id: types
----
-
-## Types
-
-//TODO

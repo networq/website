@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="lazyload" lang="en">
+    <head>
+        <title>business-architecture · Networq</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                <link rel="icon" type="image/png" href="/icon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share:400|Jaldi:400,700|Fira+Mono:400,700">
+        <link rel="stylesheet" href="/assets/base.css">
+        <link rel="stylesheet" href="/assets/lindoc.css">
+        <style>
+            a,.results strong{color:#d21}
+            button,input[type=submit],input[type=button],input[type=reset],.button,.search input[type=submit]{background-color:#d21}
+            .search input[type=text]:focus,.results,.results strong{border-color:#d21 !important}
+            @media screen and (min-width:1450px){.livetoc a.active{ color:#d21}}
+        </style>
+        <script>
+            // Parent Elements - e.P("body") - https://gist.github.com/moqmar/0995cf6595201f7a062fb173cb4ab938
+            (function(E){E.matches||(E.matches=E.matchesSelector||E.msMatchesSelector||E.webkitMatchesSelector)})(Element.prototype)
+            Element.prototype.P=function(s){var e=this
+            if(!s||typeof s=="number")for(var i=0;i<(s||1);i++)e=e?e.parentElement:e
+            else if(typeof s=="string")while(e&&!e.matches(s))e=e.parentElement
+            else while(e&&e!=s)e=e.parentElement
+            return e}
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="/"><img src="https://avatars3.githubusercontent.com/u/40381856?s=200&amp;v=4" alt="Networq"></a>
+            </h1>
+            <!-- THIS DOCUMENT IS INDEXED -->
+            <div class="search" role="search"><form data-baseurl="" onsubmit="search(this); return false;">
+                <input type="text" class="search-query" oninput="search(this.parentElement)" placeholder="Search...">
+                <input type="submit" value="➜">
+            </form><div class="results"></div></div>
+            <nav class="breadcrumbs">
+                <a href="/">Networq</a> » <a href="/use-cases/">use-cases</a> » <strong>business-architecture</strong>
+            </nav>
+        </header>
+
+        <main>
+            <aside class="toc"><ul></ul></aside>
+            <article>
+                <template search-description></template>
+
+<!-- CONTENT START -->
+<h1 id="use-case-enterprise--business-architecture">Use-case: Enterprise / Business Architecture</h1>
+<p>Use Networq to define  a Graph of your business containing all your team-members, suppliers, projects, products, processes.</p>
+<p>Once you've defined your entire business as a Networq Graph, you'll have a single &quot;Source of Truth&quot; that serves as input for many different business scenarios:</p>
+<ul>
+<li>Automatically generated Employee Manuals guaranteed to be current</li>
+<li>Generated organizational charts</li>
+<li>Compliancy control and auditing reports</li>
+<li>Permission rules (authorization matrixes) for external services</li>
+<li>HR applicant tracking</li>
+<li>Performance evaluations</li>
+<li>Business Process definitions with generated documentation</li>
+</ul>
+<!-- CONTENT END -->
+
+            </article>
+        </main>
+
+        <script src="/assets/toc.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script>Prism.plugins.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/";</script>
+        <link rel="stylesheet" href="/assets/prism.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/js-search@1.4.2/dist/umd/js-search.min.js"></script>
+        <script src="/assets/search.js"></script>
+    </body>
+</html>
