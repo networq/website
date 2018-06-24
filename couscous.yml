@@ -1,0 +1,38 @@
+template:
+    url: https://github.com/moqmar/mintlook-couscous
+
+
+logo: https://avatars3.githubusercontent.com/u/40381856?s=200&v=4
+color: "#d21"   # Accent color
+
+defaultLanguage: en
+
+search: true # Enable search
+scripts:
+    after:
+        - php .couscous/generated/.scripts/generate-search-index.php # Required for search
+        - rm -rf .couscous/generated/.scripts # Clean up unneccessary files
+
+
+github:
+    user: networq
+    repo: networq.github.io
+
+title: Networq
+subTitle: Website
+
+# The left menu bar
+# menu:
+#     items:
+#         index:
+#             text: Home
+#             relativeUrl: ./
+#         concepts:
+#             text: Concepts
+#             relativeUrl: ./concepts.html
+#         use-cases:
+#             text: Use-cases
+#             relativeUrl: ./use-cases.html
+#         types:
+#             text: Types
+#             relativeUrl: ./types.html
