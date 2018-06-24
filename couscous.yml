@@ -1,5 +1,6 @@
 template:
     url: https://github.com/moqmar/mintlook-couscous
+    index: index.md
 
 
 logo: https://avatars3.githubusercontent.com/u/40381856?s=200&v=4

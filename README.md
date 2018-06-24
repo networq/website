@@ -1,50 +1,31 @@
----
-id: index
----
+Networq website
+===============
 
-# Networq
+This repository contains the content for www.networq.io
 
-## What is "Networq"?
+It is managed using Couscous. Check [couscous.io](https://couscous.io) to learn how to use it.
 
-In technical terms: Networq is a *multi-dimensional graph* building platform.
+## Local preview:
 
-Think of it as a cocktail of Mindmaps, Business Methodologies, ERP.
+    $ couscous preview
 
-You can use these graphs to organize your business, team, project, infrastructure, life and much more...
+You can now point your browser to http://localhost:8000 to preview the site. It gets updated automatically everytime you change a file.
 
-## What can I use Networq for?
+## Build
 
-Quite a lot actually! We've collected a set of use-cases to inspire you [here](use-cases/).
+    $ couscous generate
 
-## How does it work?
+This generates the static HTML version of this site in `.couscous/generated`
 
-Using Networq you build *Graphs*. *Graphs* contain *Nodes*. *Nodes* get tagged with one or more *Types*.
+## Deploy
 
-*Types* give *Nodes* their *Properties*.
+    $ couscous deploy
 
-*Types* and *Nodes* can be bundled up into a *Package* to share it with others.
+This builds the static website, commits it to the `gh-pages` branch, and pushes it to github.
 
-You can import *Packages* from others to re-use their work in your own *Graphs*.
+You should be able to see the latest updats on https://networq.github.io/website/
 
-For a more thorough explanation of these concepts, click [here](concepts.html)
+## Proxy
 
-## What packages are available?
+In order to use a custom domain-name with SSL, there's a proxy that forwards requests from https://www.networq.io to https://networq.github.io/website/
 
-Anybody can publish packages for Networq that you can import and re-use.
-
-The Networq project has published a range of packages you can use on [github.com/networq](https://github.com/networq).
-
-Some examples:
-
-* [Organization package](https://github.com/networq/organization-package)
-* [Requirement package](https://github.com/networq/requirement-package)
-* [Holacracy package](https://github.com/networq/holacracy-package)
-* ...etc
-
-## Can I see an online demo?
-
-Yes, check out our [demo page](demo.html).
-
-## Can I run Networq myself and start using it?
-
-Yes, just follow our [getting started guide](getting-started.html).
