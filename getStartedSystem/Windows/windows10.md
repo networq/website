@@ -27,6 +27,7 @@ C:\PHP7
 Select either one of these files:
 
 ![PHP.ini rename for Windows](/images/PHP_ini_2FilesToEdit.PNG) 
+
 and rename your choice to:
 
 ```
