@@ -55,7 +55,7 @@ Removing the ; uncomments the setting
  to active, by deleting the semicolon and saving your change.
 
 
-2d) Now the PHP runtime must be added to the Windows Path
+2d) Now add the PHP runtime to the Windows Path.
 
 In the Windows control panel navigate to or search for "advanced system settings"
 
