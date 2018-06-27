@@ -1,5 +1,5 @@
 
-## Windows 10 prerequesites run through
+## Windows 10 prerequisites run through
 
 To set up a Windows 10 machine to run NetworQ, use the following guide.
 
@@ -22,7 +22,9 @@ C:\PHP7
 
 ```
 
-2a) The PHP.ini file does not come ready to use, out of the box. Select either one of these files:
+2a) The PHP.ini file does not come ready to use, out of the box. 
+
+Select either one of these files:
 
 ![PHP.ini rename for Windows](/images/PHP_ini_2FilesToEdit.PNG) 
 and rename your choice to:
@@ -31,7 +33,9 @@ and rename your choice to:
  PHP.ini
 ```
 
-2b) Removing the ";" uncomments code in the PHP.ini files. Identify and turn on the switch:
+2b) Removing the semicolon uncomments code in the PHP.ini files. 
+
+Identify and turn on the switch:
 ```
 extention_dir = "ext"
 ```
@@ -47,7 +51,7 @@ Removing the ; uncomments the setting
  extension=openssl 
 
  ```
- to active, by deleting the semi colon and saving your change.
+ to active, by deleting the semicolon and saving your change.
 
 
 2d) Now the PHP runtime must be added to the Windows Path
@@ -67,7 +71,7 @@ Add the path settings to the Windows environment.
 ### 3) Install composer
 
 Download Composer as an [executable](https://getcomposer.org/doc/00-intro.md).
-Run the exe to install.
+Run the .exe to install.
 
 ## Run some checks
 It is a good idea to check that your setup attempts are working.
