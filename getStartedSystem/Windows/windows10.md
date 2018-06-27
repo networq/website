@@ -1,5 +1,4 @@
 
-
 ## Windows 10 prerequesites run through
 
 To set up a Windows 10 machine to run NetworQ, use the following guide.
@@ -55,13 +54,13 @@ Removing the ; uncomments the setting
 
 In the Windows control panel navigate to or search for "advanced system settings"
 
-![PHP Path settings for Windows](/images/PHP_Windows_VariablesSettings.PNG) 
+![PHP Path settings for Windows](/images/PHP_Windows_VariablesSetings.PNG) 
 
 Navigate to the path settings for Windows
 
 Browse to your PHP runtime location (the folder where you unzipped to), and add that to the environment variable path. If you have older PHP versions this will replace the outdated path.
 
-![Browse your PHP Path](/images/PHP_Windows_VariablesSettings2.PNG) 
+![Browse your PHP Path](/images/PHP_Windows_VariablesSetings2.PNG) 
 
 Add the path settings to the Windows environment.
 
