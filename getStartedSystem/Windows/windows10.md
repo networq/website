@@ -38,7 +38,9 @@ extention_dir = "ext"
 ```
 by deleting the semicolon and saving the file.
 
-![PHP.ini edit for Windows](/images/PHP_ini_WindowsSwitch.PNG) Removing the ; uncomments the setting
+![PHP.ini edit for Windows](/images/PHP_ini_WindowsSwitch.PNG) 
+
+Removing the ; uncomments the setting
 
 
 2c) In the same way switch:
@@ -53,18 +55,25 @@ by deleting the semicolon and saving the file.
 
 In the Windows control panel navigate to or search for "advanced system settings"
 
-![PHP Path settings for Windows](/images/PHP_Windows_VariablesSettings.PNG) Navigate to the path settings for Windows
+![PHP Path settings for Windows](/images/PHP_Windows_VariablesSettings.PNG) 
 
-Browse to your PHP library location (the folder where the libraries were unzipped to) and add that to the environment variable path. If you have old PHP libraries this will replace the outdated path.
+Navigate to the path settings for Windows
 
-![Browse your PHP Path](/images/PHP_Windows_VariablesSettings2.PNG) Add the path settings to the Windows environment.
+Browse to your PHP runtime location (the folder where you unzipped to), and add that to the environment variable path. If you have older PHP versions this will replace the outdated path.
 
-### 3) Download and install composer
-Composer can be installed as an [executable](https://getcomposer.org/doc/00-intro.md)
+![Browse your PHP Path](/images/PHP_Windows_VariablesSettings2.PNG) 
+
+Add the path settings to the Windows environment.
+
+### 3) Install composer
+
+Download Composer as an [executable](https://getcomposer.org/doc/00-intro.md).
+Run the exe to install.
 
 ## Run some checks
 It is a good idea to check that your setup attempts are working.
-In a command window run
+
+In a command window run:
 ```
 $ php --ini
 ```
