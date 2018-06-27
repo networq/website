@@ -102,7 +102,7 @@ The response should look something like this:
 Return to the main [Set Up](/getting-started.md) flow.
 
 
-![Octocat](/images/Octocat.png =250x250) Found a typo or error? Fork and edit this document.
+![Octocat](/images/Octocat.png width="250" height="300" ) Found a typo or error? Fork and edit this document.
 
 
 
