@@ -53,9 +53,16 @@ Removing the ";"" uncomments the setting.
 
  ```
  to active, by deleting the semicolon and saving your change.
+ 
+ 2d) In the same way switch:
+```
+ extension=mbstring 
+
+ ```
+ to active, by deleting the semicolon and saving your change.
 
 
-2d) Now add the PHP runtime to the Windows Path.
+2e) Now add the PHP runtime to the Windows Path.
 
 In the Windows control panel navigate to or search for "advanced system settings"
 
@@ -102,7 +109,7 @@ The response should look something like this:
 Return to the main [Set Up](/getting-started.md) flow.
 
 
-<img src="https://github.com/favicon.ico" width="48"> Found a typo or error? Fork and edit this document.
+<img src="https://github.com/favicon.ico" width="48"> Found a typo or error? [Create a PR](https://github.com/networq/www.networq.io).
 
 
 
