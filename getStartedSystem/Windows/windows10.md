@@ -2,14 +2,19 @@
 
 ## Windows 10 prerequesites run through
 
-If you want to set up a Windows 10 machine to run NetworQ, then you may use the following guide to assist you.
+To set up a Windows 10 machine to run NetworQ, use the following guide.
 
 
-### 1. Download the executable Git Installer for [windows](https://git-scm.com/download/win) 
-This provides you with Git bash to use as a command line. Run the executable.
+### 1. Install Git 
 
-### 2. Download the PHP libraries [latest version](http://php.net/downloads.php)
+[Git Installer for Windows](https://git-scm.com/download/win) 
+Download and run the executable.
+This provides you with Git bash to use as a command line. 
 
+
+### 2. Install the PHP Runtime
+
+Use the [latest version](http://php.net/downloads.php)
 Select the "Windows downloads".
 This will download a zip file which should be extracted to a folder such as:
 
@@ -18,7 +23,8 @@ C:\PHP7
 
 ```
 
-2a) The PHP.ini file does not come ready to use, out of the box. Select one of these files
+2a) The PHP.ini file does not come ready to use, out of the box. Select either one of these files:
+
 ![PHP.ini rename for Windows](/images/PHP_ini_2FilesToEdit.PNG) 
 and rename your choice to:
 
@@ -42,7 +48,8 @@ by deleting the semicolon and saving the file.
  ```
  to active, by deleting the semi colon and saving your change.
 
-2d) Now the PHP libraries must be added to the Windows Path
+
+2d) Now the PHP runtime must be added to the Windows Path
 
 In the Windows control panel navigate to or search for "advanced system settings"
 
