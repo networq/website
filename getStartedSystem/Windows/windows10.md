@@ -44,7 +44,7 @@ by deleting the semicolon and saving the file.
 
 ![PHP.ini edit for Windows](/images/PHP_ini_WindowsSwitch.PNG) 
 
-Removing the ; uncomments the setting
+Removing the ";"" uncomments the setting.
 
 
 2c) In the same way switch:
@@ -77,17 +77,32 @@ Run the .exe to install.
 ## Run some checks
 It is a good idea to check that your setup attempts are working.
 
+### PHP check
 In a command window run:
 ```
 $ php --ini
 ```
 
-and you should be provided with the path for the php.ini file that the system is using.
+To see the path for the php.ini file that the system is using.
+
+### Composer check
+
+In a command window run:
+```
+$ composer -v
+
+```
+The response should look something like this:
+
+![Verify Composer Install](/images/CheckYourComposerVersion.PNG) 
 
 
 ## Congratulations, you are ready to run NetworQ on your windows machine
 
 Return to the main [Set Up](/getting-started.md) flow.
+
+
+![Octocat](/images/Octocat.PNG) Found a typo or error? Fork and edit this document.
 
 
 
