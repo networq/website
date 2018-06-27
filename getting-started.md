@@ -68,6 +68,16 @@ On the directory networq-web you may run the server using:
 
 Open http://localhost:8181/ in a browser to start browsing the graph.
 
+
+Alternatively on the directory networq-web you may run the server using:
+
+```
+    $ php -S 0.0.0.0:8080 -t public/
+```
+
+Open http://localhost:8181/ in a browser to start browsing the graph.
+
+
 ### Quick start with example data
 
 You can configure the `NETWORQ_GRAPH` variable in the `.env` file to any valid Networq package.
