@@ -1,3 +1,10 @@
+---
+draft: True
+author: masterbunny@gmail.com
+editor: j.faassen@linkorb.com
+notes:  - Priority doc. 
+---
+
 # Getting started
 
 ## Prerequisites for Installing NetworQ
@@ -42,7 +49,8 @@ The enviornmental settings may be adjusted in Linux using:
 ```
 $ edit .env # Adjust for your setup
 ```
-Or by editing the file directly in Windows
+Or by editing the file directly in Windows.
+
 ![edit .env](/images/edit_envWin.PNG) 
 
 ### 2) Installing NetworQ CLi
@@ -59,7 +67,7 @@ To install
 ```
 
 
-### Starting the server (working here)
+### Starting the server
 
 On the directory networq-web you may run the server using:
 

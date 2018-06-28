@@ -1,3 +1,11 @@
+---
+draft: True
+author: masterbunny@gmail.com
+editor: j.faassen@linkorb.com
+notes: - This is a fairly adhoc document. A compile bin of issues that may need full documentation at some point.
+---
+
+
 # Trouble Shooting
 
 ## Step 1
@@ -10,6 +18,12 @@ Identify the component that is failing. The PHP runtime environment must work wi
 The two components NetworQ Web and NetworQ Cli must both be present.
 
 To use NetworQ web locally, your machine must have firewall settings to allow ports to be accessed.
+
+### Need to know
+
+* In windows directory slashes are `\` while on linux and mac they are `/`. If something doesn't work, try using the "other" option. 
+* Editing a PATH variable only takes effect the next time bash starts. It is possible that the commandline needs restarting or if all else fails, try restarting the whole machine.
+
 
 Browse the list below for some common issues.
 

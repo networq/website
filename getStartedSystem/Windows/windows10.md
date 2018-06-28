@@ -1,3 +1,10 @@
+---
+draft: True
+author: masterbunny@gmail.com
+editor: j.faassen@linkorb.com
+notes:  PHP path setting disappeared - reset, not sure when that happened!
+---
+
 
 ## Windows 10 prerequisites run through
 
@@ -68,7 +75,8 @@ In the Windows control panel navigate to or search for "advanced system settings
 
 ![PHP Path settings for Windows](/images/PHP_Windows_VariablesSetings.PNG) 
 
-Navigate to the path settings for Windows
+Select "Environment Variables"
+Navigate to the path settings for Windows and select "Edit" if there is an existing PHP path, otherwise, "New".
 
 Browse to your PHP runtime location (the folder where you unzipped to), and add that to the environment variable path. If you have older PHP versions this will replace the outdated path.
 
