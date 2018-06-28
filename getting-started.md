@@ -44,7 +44,7 @@ To install
   $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
   
 ```
-The enviornmental settings may be adjusted in Linux using: 
+The environmental settings may be adjusted in Linux using: 
 
 ```
 $ edit .env # Adjust for your setup
@@ -53,7 +53,7 @@ Or by editing the file directly in Windows.
 
 ![edit .env](/images/edit_envWin.PNG) 
 
-### 2) Installing NetworQ CLi
+### 2) Installing NetworQ Cli
 
 Next you must install the command-line utilities + package manager.
 
@@ -78,7 +78,7 @@ On the directory networq-web you may run the server using:
 Open http://localhost:8181/ in a browser to start browsing the graph.
 
 
-Alternatively on the directory networq-web you may run the server using:
+Alternatively, on the directory networq-web you may run the server using:
 
 ```
     $ php -S 0.0.0.0:8080 -t public/
@@ -89,7 +89,7 @@ Open http://localhost:8181/ in a browser to start browsing the graph.
 
 ### Quick start with example data
 
-You can configure the `NETWORQ_GRAPH` variable in the `.env` file to any valid Networq package.
+You can configure the `NETWORQ_GRAPH` variable in the `.env` file to any valid NetworQ package.
 
 If you set `NETWORQ_EXAMPLES=true`, it will also load any example nodes found in the `examples/` directory of the root package.
 

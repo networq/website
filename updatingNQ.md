@@ -35,7 +35,7 @@ notes: - This is a working doc.
 	$ composer install # install / update latest dependencies
 ```
 
-## Update the PATH Enviroment
+## Update the PATH Environment
 
 ### Windows
 
@@ -76,7 +76,7 @@ For each of the listed dependencies (networq:core and networq:organization in th
 
 If this command is successful, you'll find a `packages/` directory in your `holacracy-repository`.
 
-If this command is not successfull, perhaps it can't properly run `git` from the command-line. Try running `git --help` to check.. if that doesn't work, consult the git windows documentation to see how to make that work.
+If this command is not successful, perhaps it can't properly run `git` from the command-line. Try running `git --help` to check.. if that doesn't work, consult the git windows documentation to see how to make that work.
 
 ------
 
@@ -112,7 +112,7 @@ You could even try editing some of these example nodes (yaml) files to get a fee
 
 Holacracy is just a cool example module implementing ideas from http://holacracy.org/
 
-There are other packages on http://github.com/networq (everyting ending in `-package`).
+There are other packages on http://github.com/networq (everything ending in `-package`).
 
 <img src="https://github.com/favicon.ico" width="48"> Found a typo or error? [Create a PR](https://github.com/networq/www.networq.io).
 

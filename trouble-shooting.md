@@ -2,7 +2,7 @@
 draft: True
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
-notes: - This is a fairly adhoc document. A compile bin of issues that may need full documentation at some point.
+notes: - This is a fairly ad-hoc document. A compile bin of issues that may need full documentation at some point.
 ---
 
 
@@ -21,8 +21,8 @@ To use NetworQ web locally, your machine must have firewall settings to allow po
 
 ### Need to know
 
-* In windows directory slashes are `\` while on linux and mac they are `/`. If something doesn't work, try using the "other" option. 
-* Editing a PATH variable only takes effect the next time bash starts. It is possible that the commandline needs restarting or if all else fails, try restarting the whole machine.
+* In windows directory slashes are `\` while on Linux and Mac they are `/`. If something doesn't work, try using the "other" option. 
+* Editing a PATH variable only takes effect the next time bash starts. It is possible that the command line needs restarting or if all else fails, try restarting the whole machine.
 
 
 Browse the list below for some common issues.

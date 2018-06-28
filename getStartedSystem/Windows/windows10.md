@@ -41,7 +41,7 @@ and rename your choice to:
  PHP.ini
 ```
 
-2b) Removing the semicolon uncomments code in the PHP.ini files. 
+2b) Removing the semicolon uncomments the code in the PHP.ini files. 
 
 Identify and turn on the switch:
 ```
@@ -51,7 +51,7 @@ by deleting the semicolon and saving the file.
 
 ![PHP.ini edit for Windows](/images/PHP_ini_WindowsSwitch.PNG) 
 
-Removing the ";"" uncomments the setting.
+Removing the ";" uncomments the setting.
 
 
 2c) In the same way switch:
