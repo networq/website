@@ -36,7 +36,7 @@ To install
   $ composer install # Install this projects dependencies
   $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
   
-  ```
+```
 The enviornmental settings may be adjusted in Linux using: 
 
 ```
@@ -53,9 +53,10 @@ To install
 
 ```
   $ git clone https://github.com/networq/networq-cli
-    $ cd networq-cli
-    $ composer install
-    ```
+  $ cd networq-cli
+  $ composer install
+
+```
 
 
 ### Starting the server (working here)
