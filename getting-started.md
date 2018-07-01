@@ -46,15 +46,6 @@ Two items are required:
   $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
   
 ```
-* The environmental settings may be adjusted in the command window: 
-
-```
-$ edit .env # Adjust for your setup
-```
-* Or by editing the file directly.
-
-![edit .env](/images/edit_envWin.PNG) 
-
 ### 2) Installing NetworQ Cli
 
 Next, install the command-line utilities + package manager.
@@ -71,11 +62,11 @@ Next, install the command-line utilities + package manager.
 ## Environmental Settings
 
 
-A NetworQ package must exist for which the settings will be edited. For this example we will use the Holacracy Package.
+A NetworQ package must exist for which the settings will be edited. For this example we will use the [Holacracy Package](https://github.com/networq/holacracy-package).
 
-### 1) Clone a package
+### 1) Clone the package
 
-Clone the package from Git using a command window directed at the folder location you want to store the clone in. 
+* Clone the package from Git using a command window directed at the folder location you want to store the clone in:
 
 ```
 $ git clone https://github.com/networq/holacracy-package
@@ -96,9 +87,8 @@ $ networq install
 
 You may configure the `NETWORQ_GRAPH` variable in the `.env` file to any valid NetworQ package.
 
-1) Linux / Mac
 
-* Adjust the environmental settings in Linux or Macs using: 
+* The environmental settings may be adjusted in the command window: 
 
 ```
 $ edit .env # Adjust for your setup
@@ -106,7 +96,7 @@ $ edit .env # Adjust for your setup
 
 <!-- Joost this is from your email, I assume that it is valid for Linux/Macs --->
 
-* Define the settings:
+* Define the settings via the command prompt:
 
 ```
 ini
@@ -114,11 +104,7 @@ NETWORQ_GRAPH=C:\Users\bunny\Documents\GitHub\holacracy-package
 NETWORQ_EXAMPLES=true
 
 ```
-2) Windows
-
-Use the command prompt as above, or edit the file directly. 
-
-* Browse to the file.
+* Or edit the file directly. Browse to the file.
 
 
 ![edit .env](/images/edit_envWin.PNG) 
