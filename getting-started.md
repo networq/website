@@ -149,7 +149,7 @@ You should now be able to browse the example nodes in the holacracy package.
 
 To work with the data structure and learn more about the different components continue with this [Holacracy](exampleHolacracy.md) example.
 
-Or take an [abstract overview](concepts.md) of the components involved.
+Or, take an [abstract overview](concepts.md) of the components involved.
 
 <img src="https://github.com/favicon.ico" width="48"> Found a typo or error? [Create a PR](https://github.com/networq/www.networq.io).
 
