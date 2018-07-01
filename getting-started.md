@@ -123,7 +123,7 @@ Setting `NETWORQ_EXAMPLES=true` loads any example nodes found in the `examples/`
 
 ### Start the server
 
-* Using a command window pointed at the directory networq-web run the server using:
+* Using a command prompt pointed at the directory **networq-web** run the server using:
 
 ```
     $ php -S 0.0.0.0:8080 -t public/
