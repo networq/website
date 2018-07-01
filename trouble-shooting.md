@@ -1,6 +1,7 @@
 
 ---
 draft: True
+spellChecked: F
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
 notes: - This is a fairly ad-hoc document. A compile bin of issues that may need full documentation at some point.

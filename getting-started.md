@@ -3,6 +3,7 @@
 draft: True
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
+spellChecked: F
 notes:  - Priority doc. 
 ---
 
@@ -28,15 +29,15 @@ If one or more of these conditions are not met, don't worry. Rather, check out t
 
 Two items are required:
 
-"NetworQ Web" is our web-based viewer application. You can configure it to load a Graph of your choice and browse it.
+* "NetworQ Web" is our web-based viewer application. You can configure it to load a Graph of your choice and browse it.
 
-"NetworQ Cli" is a command-line utility used to:
-* inspect graphs (list packages, types, nodes)
-* install package dependencies
+* "NetworQ Cli" is a command-line utility used to:
+	- inspect graphs (list packages, types, nodes)
+	- install package dependencies
 
 ### 1) NetowrQ Web
 
-To install
+* To install, use a command prompt to run:
 
 ```
   $ git clone https://github.com/networq/networq-web
@@ -45,20 +46,20 @@ To install
   $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
   
 ```
-The environmental settings may be adjusted in Linux using: 
+* The environmental settings may be adjusted in the command window: 
 
 ```
 $ edit .env # Adjust for your setup
 ```
-Or by editing the file directly in Windows.
+* Or by editing the file directly.
 
 ![edit .env](/images/edit_envWin.PNG) 
 
 ### 2) Installing NetworQ Cli
 
-Next you must install the command-line utilities + package manager.
+Next, install the command-line utilities + package manager.
 
-To install
+* Use a command prompt to run:
 
 ```
   $ git clone https://github.com/networq/networq-cli
@@ -74,7 +75,7 @@ A NetworQ package must exist for which the settings will be edited. For this exa
 
 ### 1) Clone a package
 
-Clone the package from Git using a command window directed at the folder location you want to store the clone. 
+Clone the package from Git using a command window directed at the folder location you want to store the clone in. 
 
 ```
 $ git clone https://github.com/networq/holacracy-package
@@ -91,13 +92,13 @@ $ networq install
 ```
 
 
-## Edit settings
+## Configure NewtorQ to use a package
 
 You may configure the `NETWORQ_GRAPH` variable in the `.env` file to any valid NetworQ package.
 
-Adjust the environmental settings in Linux or Macs using: 
+1) Linux / Mac
 
-### 1)
+* Adjust the environmental settings in Linux or Macs using: 
 
 ```
 $ edit .env # Adjust for your setup
@@ -105,23 +106,26 @@ $ edit .env # Adjust for your setup
 
 <!-- Joost this is from your email, I assume that it is valid for Linux/Macs --->
 
-### 2)
+* Define the settings:
+
 ```
 ini
 NETWORQ_GRAPH=C:\Users\bunny\Documents\GitHub\holacracy-package
 NETWORQ_EXAMPLES=true
 
 ```
+2) Windows
 
-For Windows you may editi the file directly. 
-Browse to the file.
-### 1)
+Use the command prompt as above, or edit the file directly. 
+
+* Browse to the file.
+
+
 ![edit .env](/images/edit_envWin.PNG) 
 
-### 2)
-Set the value of NETWORQ_GRAPH to the folder containing the package.
-Set the NETWORQ_EXAMPLES to true.
-Save and close the file.
+	- Set the value of NETWORQ_GRAPH to the folder containing the package.
+	- Set the NETWORQ_EXAMPLES to true.
+	- Save and close the file.
 
 
 ![edit .env](/images/Install4_Holacracy.PNG) 
@@ -141,21 +145,20 @@ $ networq install # install dependencies into packages/
 
 ### Starting the server
 
-Using a command window pointed at the directory networq-web run the server using:
+* Using a command window pointed at the directory networq-web run the server using:
 
 ```
     $ php -S 0.0.0.0:8080 -t public/
 ```
+* Open http://localhost:8080/ in a browser to start browsing the graph.
 
-Open http://localhost:8080/ in a browser to start browsing the graph.
-
-As ports may be pre-assigned you may use this alternative.
+	- As ports may be pre-assigned you may use this alternative:
 
 ```
     $ php -S localhost:54321 -t public/
 ```
 
-Open http://localhost:54321 in a browser to start browsing the graph.
+	- Open http://localhost:54321 in a browser to start browsing the graph.
 
 
 ### Quick start with example data

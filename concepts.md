@@ -4,14 +4,15 @@ id: concepts
 
 # Concepts
 
-Networq uses a few concepts you need to understand in order to build your own graphs.
-Below you'll find definitions for Networq's terms:
+NetworQ uses a few concepts you need to understand in order to build your own graphs.
+
+Below you'll find definitions for NetworQ's terms:
 
 ## Node
 
-All data in Networq is a "Node". A node has a name (i.e. `mario`). Every node is part of a package (i.e. `acme:example`). The node name and the package name combined give a Fully Qualified Node Name (FQNN) (i.e. `acme:example:mario`).
+All data in NetworQ is a "Node". A node has a name (i.e. `mario`). Every node is part of a package (i.e. `acme:example`). The node name and the package name combined give a Fully Qualified Node Name (FQNN) (i.e. `acme:example:mario`).
 
-Other than the name/fqnn, a node doesn't have any properties of it's own. A Node can be tagged with one or more Types, which give the node it's available properties. For example, tagging the `acme:example:mario` node with the `acme:example:character` type allows you to specify the `debut` field for Mario, linking it to the game that Mario debuted in.
+Other than the name/FQNN, a node doesn't have any properties of it's own. A Node can be tagged with one or more Types, which give the node it's available properties. For example, tagging the `acme:example:mario` node with the `acme:example:character` type allows you to specify the `debut` field for Mario, linking it to the game that Mario debuted in.
 
 ## Types
 

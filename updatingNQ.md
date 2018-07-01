@@ -1,6 +1,7 @@
 
 ---
 draft: True
+spellChecked: F
 author: j.faassen@linkorb.com
 editor: masterbunny@gmail.com
 notes: - This is a working doc.
