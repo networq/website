@@ -35,7 +35,7 @@ Two items are required:
 	- inspect graphs (list packages, types, nodes)
 	- install package dependencies
 
-### 1) NetowrQ Web
+### 1) Install NetowrQ Web
 
 * To install, use a command prompt to run:
 
@@ -46,7 +46,7 @@ Two items are required:
   $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
   
 ```
-### 2) Installing NetworQ Cli
+### 2) Install NetworQ Cli
 
 Next, install the command-line utilities + package manager.
 
@@ -59,10 +59,9 @@ Next, install the command-line utilities + package manager.
 
 ```
 
-## Environmental Settings
+## Apply a Package
 
-
-A NetworQ package must exist for which the settings will be edited. For this example we will use the [Holacracy Package](https://github.com/networq/holacracy-package).
+A NetworQ package must exist. For this example we will use the [Holacracy Package](https://github.com/networq/holacracy-package).
 
 ### 1) Clone the package
 
@@ -75,20 +74,22 @@ $ git clone https://github.com/networq/holacracy-package
 
 ### 2) Install NetworQ
 
-Install NetworQ to run this package. Direct a command window to the folder holacracy-package and run:
+Install NetworQ to run this package. 
+
+* Change directory of the command window, to the folder containing your package, in this example the holacracy-package and run:
 
 ```
-$ networq install
+$ networq install # install dependencies into packages
 
 ```
 
 
-## Configure NewtorQ to use a package
+## 3) Configure NewtorQ to use the package
 
 You may configure the `NETWORQ_GRAPH` variable in the `.env` file to any valid NetworQ package.
 
 
-* The environmental settings may be adjusted in the command window: 
+* The environmental settings may be adjusted using the command prompt: 
 
 ```
 $ edit .env # Adjust for your setup
@@ -104,7 +105,7 @@ NETWORQ_GRAPH=C:\Users\bunny\Documents\GitHub\holacracy-package
 NETWORQ_EXAMPLES=true
 
 ```
-* Or edit the file directly. Browse to the file.
+* Or edit the file directly. Browse to the file:
 
 
 ![edit .env](/images/edit_envWin.PNG) 
@@ -119,17 +120,8 @@ NETWORQ_EXAMPLES=true
 Setting `NETWORQ_EXAMPLES=true` loads any example nodes found in the `examples/` directory of the root package.
 
 
-## Install NetworQ to run your package
 
-Direct a command window at the folder location for the package. Now NetworQ dependencies may be installed on the local copy of the package using:
-
-```
-$ networq install # install dependencies into packages/
-
-```
-![install dependencies](/images/Install1_Holacracy.PNG) 
-
-### Starting the server
+### Start the server
 
 * Using a command window pointed at the directory networq-web run the server using:
 
@@ -155,6 +147,8 @@ You should now be able to browse the example nodes in the holacracy package.
 ![example nodes](/images/Holacracy1.PNG) 
 
 To work with the data structure and learn more about the different components continue with this [Holacracy](exampleHolacracy.md) example.
+
+Or take an [abstract overview](concepts.md) of the components involved.
 
 <img src="https://github.com/favicon.ico" width="48"> Found a typo or error? [Create a PR](https://github.com/networq/www.networq.io).
 
