@@ -18,8 +18,8 @@ The structure of the data managed by NetworQ falls within 3 categories:
 3 versions of the model follow (vote)
 
 ![data model version H](/images/SummaryDataModel.png) 
-![data model version I](/images/SummaryModelPackagesI.png) 
-![data model version J](/images/SummaryModelPackagesJ.png) 
+![data model version I](/images/SummaryModePackagesI.png) 
+![data model version J](/images/SummaryModePackagesJ.png) 
 
 By adding and removing types you reset the properties of the node. This means the system is responsive from the bottom up.
 
