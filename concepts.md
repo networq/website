@@ -6,7 +6,7 @@ id: concepts
 
 NetworQ uses a few concepts you need to understand in order to build your own graphs.
 
-Below you'll find definitions for NetworQ's terms:
+Find definitions for NetworQ's terms below:
 
 ## Node
 
@@ -18,14 +18,16 @@ Other than the name/FQNN, a node doesn't have any properties of it's own. A Node
 
 A "Type" defines what properties a Node can have. A type has a name (i.e. `vegetable`) and is part of a package (i.e. `acme:food`). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. `acme:food:vegetable`).
 
-Types are defined by creating `.yaml` files in the `types/` directory of a package. They are automatically loaded when the package is loaded.
+Types are defined by creating `.yaml` files in the `types/` directory of a package. These are loaded with the package.
 
-Types optionally define a list of Fields for the type. Only nodes tagged with this type will have the listed fields.
+Types optionally define a list of Fields for the type. Nodes tagged with this type will then adopt the listed fields.
 
 A Field can be either a `string` (simple text), or a FQTN. When you specify a FQTN for a Field, you
 can only assign nodes that are tagged with this type.
 
 A Field can be a single value (default), or a list of values (by appending [] to the end of the Field type definition).
+
+![Fields with single and multiple values](/images/TypesFields.PNG) 
 
 ## Tags
 
@@ -37,12 +39,11 @@ A "Package" is a reusable set of Types and Nodes. Packages can be shared and liv
 
 A Package defines Types (in the package's `types/` directory) using YAML files.
 
-A Package can optionally define a set of `Nodes`. Nodes in packages are therefor also reusable and lets you share reference data or standardized lists (like countries, operating systems, etc).
+A Package can optionally define a set of `Nodes`. Nodes in packages are therefore, are also reusable allowing you to share reference data or standardized lists (like countries, operating systems, etc.).
 
 A Package can optionally define `Widgets`, which are simple HTML templates (in the `templates/` directory) which get injected into the User Interface when a user is viewing a Node of a given Type.
 
-A Package always has a `package.yaml` file in the root of it's repository.
-The `package.yaml` file defines the Package's name, description, license etc. And lists an optional set
+A Package always has a `package.yaml` file in the root of it's repository. The `package.yaml` file defines the Package's name, description, license etc. And lists an optional set
 of dependencies: other packages that this package depends on.
 
 ## Graph

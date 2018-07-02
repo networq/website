@@ -4,7 +4,7 @@ draft: True
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
 spellChecked: F
-notes:  - Priority doc. 
+notes:  - Priority doc, can't get second local host to render on gh as sub-bullet (!)
 ---
 
 # Getting started

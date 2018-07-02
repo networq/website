@@ -15,11 +15,15 @@ The structure of the data managed by NetworQ falls within 3 categories:
 * Node
 * Type
 
+3 versions of the model follow (vote)
 
-![data model](/images/SummaryDataModel.PNG) 
+![data model version H](/images/SummaryDataModel.png) 
+![data model version I](/images/SummaryModelPackagesI.png) 
+![data model version J](/images/SummaryModelPackagesJ.png) 
 
 By adding and removing types you reset the properties of the node. This means the system is responsive from the bottom up.
 
+<!-- needs a Holacracy relevant example -->
 If you add a new employee to your database, the tree of detail that employees should carry with them are added to the node, to allow data to be filtered, visualised, displayed, among other transformations.
 
 For example: names, date of birth, employment date, termination date, cvFileLocation, HR records.
