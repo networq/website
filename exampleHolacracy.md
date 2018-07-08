@@ -15,21 +15,21 @@ The structure of the data managed by NetworQ falls within 3 categories:
 * Node
 * Type
 
-3 versions of the model follow (vote)
 
 ![data model version H](/images/SummaryDataModel.png) 
-![data model version I](/images/SummaryModePackagesI.png) 
-![data model version J](/images/SummaryModePackagesJ.png) 
 
 By adding and removing types you reset the properties of the node. This means the system is responsive from the bottom up.
 
-<!-- needs a Holacracy relevant example -->
-If you add a new employee to your database, the tree of detail that employees should carry with them are added to the node, to allow data to be filtered, visualised, displayed, among other transformations.
+## Holacracy and NetworQ
 
-For example: names, date of birth, employment date, termination date, cvFileLocation, HR records.
+[Holocracy](https://www.holacracy.org/) is a institution organisation architecture. The process and philosophy of Hoacracy is one of flat management, providing teams with more autonomy. When an individual within an organisation is empowered to implement their own ideas, that organisation can flourish.
 
+The creators of NetworQ apply this agile structure within their own business. Which is why one of the first packages implemented was the Holacracy package. By installing and applying this you create a simple, dynamic system to self-manage the Holacracy framework. 
 
-Creating a type creates the template for future types (y?), editing type (legacy data or gone?)
+# Holacracy Terminology
+
+To be able to apply the principles of Holacracy, you must become familiar with some basic concepts integral to the philosophical framework.
+
 
 
 

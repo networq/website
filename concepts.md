@@ -1,4 +1,10 @@
+
 ---
+draft: True
+author: j.faassen@linkorb.com
+editor: masterbunny@gmail.com
+spellChecked: F
+notes:  - Priority doc
 id: concepts
 ---
 
@@ -6,21 +12,33 @@ id: concepts
 
 NetworQ uses a few concepts you need to understand in order to build your own graphs.
 
-Find definitions for NetworQ's terms below:
-
 ## Node
 
-All data in NetworQ is a "Node". A node has a name (i.e. `mario`). Every node is part of a package (i.e. `acme:example`). The node name and the package name combined give a Fully Qualified Node Name (FQNN) (i.e. `acme:example:mario`).
+All data in NetworQ is contained within a "Node". A node has a name, for example our School has an IT supplier called `SoltechIT`. Every node is part of a package, our School's package is `School:OldSkool`. 
 
-Other than the name/FQNN, a node doesn't have any properties of it's own. A Node can be tagged with one or more Types, which give the node it's available properties. For example, tagging the `acme:example:mario` node with the `acme:example:character` type allows you to specify the `debut` field for Mario, linking it to the game that Mario debuted in.
+![Node Naming](/images/ConceptsSlide2.PNG) 
+
+The node name and the package name combined give a Fully Qualified Node Name (FQNN), in this case `School:OldSkool:SoltechIT`. Thus this supplier now exists as an entity. Other than the having its own unique identifier, the FQNN, a node doesn't have any other properties of it's own. 
+
+By tagging a node with one or more "Types", the node is given properties. 
 
 ## Types
 
-A "Type" defines what properties a Node can have. A type has a name (i.e. `vegetable`) and is part of a package (i.e. `acme:food`). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. `acme:food:vegetable`).
+A "Type" defines what properties a node can have. For example, tagging the `School:OldSkool:SoltechIT` node with the `School:OldSkool:SupplierContracts` type allows you to specify the field `contractEndDate` for `SoltechIT`, allowing the contract agreement end date to be linked to that supplier.
+
+![Type Naming](/images/ConceptsSlide3.PNG) 
+
+A type has a name (i.e. `SupplierContracts`) and is part of a package (i.e. `Supplier:Managment`). <!-- This is where my confusion is creeping in - I have skipped from the package School:OldSkool to an - as yet unmentioned Supplier:Managment (which I think is completely valid (in terms of usage), but is a package dependency- as yet unmentioned!!!???) ---> 
+
+Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. `Supplier:Management:SupplierContracts`).
 
 Types are defined by creating `.yaml` files in the `types/` directory of a package. These are loaded with the package.
 
-Types optionally define a list of Fields for the type. Nodes tagged with this type will then adopt the listed fields.
+Types optionally define a list of Fields for the type. <!-- Types can also be objects held within the database - yes?--->
+
+Nodes tagged with this type will then adopt the listed fields.
+
+![Graphs link Packages](/images/ConceptsSlide4.PNG) 
 
 A Field can be either a `string` (simple text), or a FQTN. When you specify a FQTN for a Field, you
 can only assign nodes that are tagged with this type.
@@ -51,3 +69,5 @@ of dependencies: other packages that this package depends on.
 When using Networq, you'll almost always interact with a "Graph". A Graph is a container for one or more Packages and their contents (Nodes, Types, Widgets).
 
 A Graph always has exactly 1 "Root Package" which is the main package of your project. Additionally the graph recursively loads and holds all packages that a parent package has a dependency on.
+
+![Graphs link Packages](/images/ConceptsSlide5.PNG) 

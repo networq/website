@@ -17,7 +17,7 @@ The following prerequisites must be met before undertaking the installation:
 
 2) You are familiar with editing [YAML](https://wikipedia.org/wiki/YAML)
 
-3) You are able to run ([minimum version 7](http://php.net/downloads.php)) [PHP](https://php.net) applications on your machine.
+3) You are able to run ([minimum version 7](http://php.net/downloads.php)) [PHP](https://php.net) applications on your machine
 
 4) You are able to run [Composer](https://getcomposer.org/)
 NB further system-dependent instructions for installing composer are available [here](https://getcomposer.org/doc/00-intro.md)
