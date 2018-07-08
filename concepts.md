@@ -71,6 +71,6 @@ of dependencies: other packages that this package depends on.
 
 When using Networq, you'll almost always interact with a "Graph". A Graph is a container for one or more Packages and their contents (Nodes, Types, Widgets).
 
-A Graph always has exactly 1 "Root Package" which is the main package of your project. Additionally the graph recursively loads and holds all packages that a parent package has a dependency on.
+A Graph always has exactly 1 "Root Package" which is the main package of your project. For our example this is School:OldSkool. Additionally the graph recursively loads and holds all packages that a parent package has a dependency on. For this example we added the Supplier Contract Types that comes as part of the Supplier:Management package, however an institution as complicated as a school will pull in many packages and their dependents.
 
 ![Graphs link Packages](/images/ConceptsSlide5.PNG) 
