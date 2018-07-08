@@ -4,7 +4,7 @@ draft: True
 spellChecked: F
 author: j.faassen@linkorb.com
 editor: masterbunny@gmail.com
-notes: - This is a working doc.
+notes: - This is a working doc, with lots to be trimmed away. Needs path adjustment instructions for Linux/Mac
 ---
 
 ## Updating NetworQ-web
@@ -59,15 +59,17 @@ After updating your PATH variable, you'll usually need to restart your bash term
 ### Linux/Mac
 
 
+## Success
+
 The end-goal is that you can type `networq` + enter and be presented with something like this:
 
-https://www.dropbox.com/s/1wsc0x2f0m2h7ru/Screenshot%202018-06-27%2017.36.33.png?dl=0
+![cli/Bin Path settings for Windows](/images/CommandsAvailable.PNG) 
 
-As long as it says something like "Command not found" there's still something that needs fixing on the PATH variable, or resetting/reloading the bash session.
+"Command not found" suggests that there's still something that needs fixing on the PATH variable, or resetting/reloading the bash session.
 
 -----
 
-Next up, `cd` to the repository path of the `holacracy-package`:
+Next up, `cd` to the repository path of the package, for example the `holacracy-package`:
 
     $ cd ~/Documents/GitHub/holacracy-package
     $ networq install
