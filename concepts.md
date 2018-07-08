@@ -28,10 +28,11 @@ A "Type" defines what properties a node can have. For example, tagging the `Scho
 
 Notice that our organisation OldSkool has reached out to use a type held within a different package (`Supplier:Management`). Now that the node SoltechIT is associated with this type all the architecture that comes with this type is now linked to the node. This means that every aspect of supplier management provided by this package, is now available to the School to use.
 
-![Type Naming](/images/ConceptsSlide3.PNG) 
 
 ## Type Names
 A type has a name (i.e. `SupplierContracts`) and is part of a package (i.e. `Supplier:Managment`). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. `Supplier:Management:SupplierContracts`).
+
+![Type Naming](/images/ConceptsSlide3.PNG) 
 
 ## Managing Types
 Types are defined by creating `.yaml` files in the `types/` directory of a package. These are loaded with the package.
