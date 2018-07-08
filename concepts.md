@@ -18,7 +18,7 @@ All data in NetworQ is contained within a "Node". A node has a name, for example
 
 ![Node Naming](/images/ConceptsSlide2.PNG) 
 
-The node name and the package name combined give a Fully Qualified Node Name (FQNN), in this case `School:OldSkool:SoltechIT`. Thus this supplier now exists as an entity. Other than the having its own unique identifier, its FQNN, a node doesn't have any other properties of it's own. 
+The node name and the package name combined give a Fully Qualified Node Name (FQNN), in this case `School:OldSkool:SoltechIT`. Thus, this supplier now exists as an entity. Other than the having its own unique identifier, its FQNN, a node doesn't have any other properties of it's own. 
 
 By tagging a node with one or more "Types", the node is given properties. 
 
@@ -31,6 +31,8 @@ Notice that our organisation OldSkool has reached out to use a type held within 
 
 ## Type Names
 A type has a name (i.e. `SupplierContracts`) and is part of a package (i.e. `Supplier:Managment`). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. `Supplier:Management:SupplierContracts`).
+
+<!-- I assume the above is correct Supplier:Management:SupplierContracts - Rather than the image below School:OldSkool:SupplierContracts - i.e. original package for name, rather than the new "Root Package" providing the name? --->
 
 ![Type Naming](/images/ConceptsSlide3.PNG) 
 
