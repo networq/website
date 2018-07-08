@@ -10,7 +10,7 @@ id: concepts
 
 # Concepts
 
-NetworQ uses a few concepts you need to understand in order to build your own graphs.
+NetworQ uses a few concepts you need to understand in order to build your own graphs. An example organisation "OldSkool", an imaginary School with students, teachers, suppliers, parents etc. serves as a model for this explanation.
 
 ## Node
 
@@ -18,20 +18,22 @@ All data in NetworQ is contained within a "Node". A node has a name, for example
 
 ![Node Naming](/images/ConceptsSlide2.PNG) 
 
-The node name and the package name combined give a Fully Qualified Node Name (FQNN), in this case `School:OldSkool:SoltechIT`. Thus this supplier now exists as an entity. Other than the having its own unique identifier, the FQNN, a node doesn't have any other properties of it's own. 
+The node name and the package name combined give a Fully Qualified Node Name (FQNN), in this case `School:OldSkool:SoltechIT`. Thus this supplier now exists as an entity. Other than the having its own unique identifier, its FQNN, a node doesn't have any other properties of it's own. 
 
 By tagging a node with one or more "Types", the node is given properties. 
 
 ## Types
 
-A "Type" defines what properties a node can have. For example, tagging the `School:OldSkool:SoltechIT` node with the `School:OldSkool:SupplierContracts` type allows you to specify the field `contractEndDate` for `SoltechIT`, allowing the contract agreement end date to be linked to that supplier.
+A "Type" defines what properties a node can have. For example, tagging the `School:OldSkool:SoltechIT` node with the `Supplier:Management:SupplierContracts` type allows you to specify the field `contractEndDate` for `SoltechIT`, allowing the contract agreement end date to be linked to that supplier.
+
+Notice that our organisation OldSkool has reached out to use a type held within a different package (`Supplier:Management`). Now that the node SoltechIT is associated with this type all the architecture that comes with this type is now linked to the node. This means that every aspect of supplier management provided by this package, is now available to the School to use.
 
 ![Type Naming](/images/ConceptsSlide3.PNG) 
 
-A type has a name (i.e. `SupplierContracts`) and is part of a package (i.e. `Supplier:Managment`). <!-- This is where my confusion is creeping in - I have skipped from the package School:OldSkool to an - as yet unmentioned Supplier:Managment (which I think is completely valid (in terms of usage), but is a package dependency- as yet unmentioned!!!???) ---> 
+## Type Names
+A type has a name (i.e. `SupplierContracts`) and is part of a package (i.e. `Supplier:Managment`). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. `Supplier:Management:SupplierContracts`).
 
-Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. `Supplier:Management:SupplierContracts`).
-
+## Managing Types
 Types are defined by creating `.yaml` files in the `types/` directory of a package. These are loaded with the package.
 
 Types optionally define a list of Fields for the type. <!-- Types can also be objects held within the database - yes?--->
