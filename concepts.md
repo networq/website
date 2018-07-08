@@ -71,6 +71,20 @@ of dependencies: other packages that this package depends on.
 
 When using Networq, you'll almost always interact with a "Graph". A Graph is a container for one or more Packages and their contents (Nodes, Types, Widgets).
 
-A Graph always has exactly 1 "Root Package" which is the main package of your project. For our example this is School:OldSkool. Additionally the graph recursively loads and holds all packages that a parent package has a dependency on. For this example we added the Supplier Contract Types that comes as part of the Supplier:Management package, however an institution as complicated as a school will pull in many packages and their dependents.
+A Graph always has exactly 1 "Root Package" which is the main package of your project. For our example this is School:OldSkool. Additionally the graph recursively loads and holds all packages that a parent package has a dependency on. 
 
 ![Graphs link Packages](/images/ConceptsSlide5.PNG) 
+
+## Dependencies
+
+For our example we added the Supplier Contract Types that comes as part of the Supplier:Management package, however an institution as complicated as a school will pull in many packages and their dependents.
+
+When one package requires/builds on another, it is called a “Dependency”. Package A depends on Package B. Each package defines it’s own dependencies so that when the package is installed, it’s required dependencies are also automatically installed.
+
+![Packages may depend upon other Packages](/images/ConceptsSlide6.PNG)
+
+For example, the "StudentBody" package would need to hold fields within the type such as student home address. By making use of an existing postal system address package for the country the School is based in, school adminstrators can find each student's full address including post code (zip code), in the address package. 
+
+Similarly the GDPR package may be applied to the parent body, student body, staff and suppliers.
+
+ 
