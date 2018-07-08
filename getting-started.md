@@ -141,9 +141,14 @@ Setting `NETWORQ_EXAMPLES=true` loads any example nodes found in the `examples/`
 ### Quick start with example data
 
 
-You should now be able to browse the example nodes in the holacracy package.
+Congratulations! You should now be able to browse the example nodes in the holacracy package.
 
 ![example nodes](/images/Holacracy1.PNG) 
+
+
+## Next Steps
+
+A good first step is to create your [own graph](first-graph.md) using existing packages. 
 
 To work with the data structure and learn more about the different components continue with this [Holacracy](exampleHolacracy.md) example.
 

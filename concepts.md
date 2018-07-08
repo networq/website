@@ -4,42 +4,47 @@ draft: True
 author: j.faassen@linkorb.com
 editor: masterbunny@gmail.com
 spellChecked: F
-notes:  - Priority doc
+notes:  - Priority doc. Edits required for naming conventions- NB "node, type and package names, i've been sticking to "kebab-casing", so instead of OldSchool it'd be old-school" AND the naming needs to follow the example school created by Joost.
 id: concepts
 ---
 
 # Concepts
 
-NetworQ uses a few concepts you need to understand in order to build your own graphs. An example organisation "OldSkool", an imaginary School with students, teachers, suppliers, parents etc. serves as a model for this explanation.
+NetworQ uses a few concepts you need to understand in order to build your own graphs. An example organisation "old-skool", an imaginary School with students, teachers, suppliers, parents etc. serves as a model for this explanation.
+
+## Naming Convention
+
+Note the naming convention applied throughout NetworQ packages created by LinkOrb is [kebab-casing](http://wiki.c2.com/?KebabCase). 
 
 ## Node
 
-All data in NetworQ is contained within a "Node". A node has a name, for example our School has an IT supplier called `SoltechIT`. Every node is part of a package, our School's package is `School:OldSkool`. 
+All data in NetworQ is contained within a "node". A node has a name, for example our School has an IT supplier called `soltech-it`. Every node is part of a package, our School's package is `old-skool:school`. 
 
 ![Node Naming](/images/ConceptsSlide2.PNG) 
 
-The node name and the package name combined give a Fully Qualified Node Name (FQNN), in this case `School:OldSkool:SoltechIT`. Thus, this supplier now exists as an entity. Other than the having its own unique identifier, its FQNN, a node doesn't have any other properties of it's own. 
+The node name and the package name combined give a Fully Qualified Node Name (FQNN), in this case `old-skool:school:soltech-it`. Thus, this supplier now exists as an entity. Other than the having its own unique identifier, its FQNN, a node doesn't have any other properties of it's own. 
 
 By tagging a node with one or more "Types", the node is given properties. 
 
 ## Types
 
-A "Type" defines what properties a node can have. For example, tagging the `School:OldSkool:SoltechIT` node with the `Supplier:Management:SupplierContracts` type allows you to specify the field `contractEndDate` for `SoltechIT`, allowing the contract agreement end date to be linked to that supplier.
+A "Type" defines what properties a node can have. For example, tagging the `old-skool:school:soltech-it` node with the `supplier:management:contracts` type allows you to specify the field `contract-end-date` for `soltech-it`, allowing the contract agreement end date to be linked to that supplier.
 
-Notice that our organisation OldSkool has reached out to use a type held within a different package (`Supplier:Management`). Now that the node SoltechIT is associated with this type all the architecture that comes with this type is now linked to the node. This means that every aspect of supplier management provided by this package, is now available to the School to use.
+Notice that our organisation OldSkool has reached out to use a type held within a different package (`supplier:management`). Now that the node SoltechIT is associated with this type all the architecture that comes with this type is now linked to the node. This means that every aspect of supplier management provided by this package, is now available to the School to use.
 
 
 ## Type Names
-A type has a name (i.e. `SupplierContracts`) and is part of a package (i.e. `Supplier:Managment`). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. `Supplier:Management:SupplierContracts`).
+A type has a name (i.e. `contracts`) and is part of a package (i.e. `supplier:managment`). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. `supplier:management:contracts`).
 
-<!-- I assume the above is correct Supplier:Management:SupplierContracts - Rather than the image below School:OldSkool:SupplierContracts - i.e. original package for name, rather than the new "Root Package" providing the name? --->
+<!-- I assume the above is correct supplier:management:contracts - Rather than the image below School:OldSkool:SupplierContracts - i.e. Name is fixed to original package --->
 
 ![Type Naming](/images/ConceptsSlide3.PNG) 
 
 ## Managing Types
 Types are defined by creating `.yaml` files in the `types/` directory of a package. These are loaded with the package.
 
-Types optionally define a list of Fields for the type. <!-- Types can also be objects held within the database - yes?--->
+Types optionally define a list of Fields for the type. 
+<!-- Types can also be objects held within the database - yes?--->
 
 Nodes tagged with this type will then adopt the listed fields.
 
