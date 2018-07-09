@@ -63,7 +63,7 @@ Next, install the command-line utilities + package manager.
 
 A NetworQ package must exist. For this example we will use the [Holacracy Package](https://github.com/networq/holacracy-package).
 
-### 1) Clone the package
+### 1. Clone the package
 
 * Clone the package from Git using a command window directed at the folder location you want to store the clone in:
 
@@ -72,7 +72,7 @@ $ git clone https://github.com/networq/holacracy-package
 
 ```
 
-### 2) Install NetworQ
+### 2. Install NetworQ
 
 Install NetworQ to run this package. 
 
@@ -84,7 +84,7 @@ $ networq install # install dependencies into packages
 ```
 
 
-## 3) Configure NewtorQ to use the package
+### 3. Configure NewtorQ to use the package
 
 You may configure the `NETWORQ_GRAPH` variable in the `.env` file to any valid NetworQ package.
 
@@ -121,7 +121,7 @@ Setting `NETWORQ_EXAMPLES=true` loads any example nodes found in the `examples/`
 
 
 
-### Start the server
+### 4. Start the server
 
 * Using a command prompt pointed at the directory **networq-web** run the server using:
 
@@ -148,11 +148,11 @@ Congratulations! You should now be able to browse the example nodes in the holac
 
 ## Next Steps
 
-A good first step is to create your [own graph](first-graph.md) using existing packages. 
+A good next step is to take an [abstract overview](concepts.md) of the components involved.
 
 To work with the data structure and learn more about the different components continue with this [Holacracy](exampleHolacracy.md) example.
 
-Or, take an [abstract overview](concepts.md) of the components involved.
+Or, create your [own graph](first-graph.md) using existing packages. 
 
 <img src="https://github.com/favicon.ico" width="48"> Found a typo or error? [Create a PR](https://github.com/networq/www.networq.io).
 

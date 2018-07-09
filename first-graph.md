@@ -9,33 +9,41 @@ notes:  - Priority doc. Part of Task 1
 
 # Create your first Graph
 
-[Getting Started](getting-started.md) will guide you through the installation of NetworQ. With that complete you are ready to create a Graph.
+[Getting Started](getting-started.md) guides you through the installation of NetworQ. The terms used are covered in [concepts](concepts.md). Assuming that you are familiar with the terms, and have the setup completed, you are ready to create a Graph. A Graph is a container for one or more Packages and their contents, creating the functioning interface for your data.
 
 
 ## Worked example
 
-For a work-through example we will create an imaginary school headed by Barak Obama.
+This work-through will create an imaginary traditional school headed by Barak Obama.
 
+### 1. Create a directory 
 
-1. Create a directory with the name `old-skool-nqp` 
-(following the convention to name a package with the tail NetworQ package `nqp`).
+The school name provides our package name; `old-skool-nqp` 
+(following the convention to name a package with the tail "NetworQ package": `nqp`).
 
-2. Create the yaml for this package.
+### 2. Create the YAML
 
-![Create Yaml](/images/createYaml.PNG) 
+The [YAML](https://en.wikipedia.org/wiki/YAML) files in NetworQ are used as your data store, and for configuration. Create a YAML in your directory called package.yaml.
 
-		populate this with the details e.g.
-					name
-					description
-					license
-		dependencies
-					neworq:core
-					neworq:resource
-4. NetworQ install
+![Create YAML](/images/createYaml.PNG) 
 
-				will create a dir. packages
-				pulled in all the dependencies
-				associating existing packages with old-skool 
+### 3. Populate the YAML relevant details 
+
+For example: 
+* name
+* description
+* license
+
+### 4. Set up the dependencies
+
+The ability to use existing packages is a key functionality of NetworQ. For the sake of brevity this example will use a minimal dependency list. A real Graph may adopt many packages.
+					
+![Set up YAML](/images/createYAML2.PNG)
+
+### 5. Install NetworQ
+
+Run the `networq install` command on your local directory, in this example old-skool-nqp. The installation will create a directory "packages" and import all the dependency packages for your Graph.
+				
 
 5. Use nework-web to view the newly created package
 				edit files as per 3 in getting started
