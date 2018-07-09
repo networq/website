@@ -34,7 +34,7 @@ For example:
 * description
 * license
 
-### 4. Set up the dependencies
+### 4. Set up dependencies
 
 The ability to use existing packages is a key functionality of NetworQ. For the sake of brevity this example will use a minimal dependency list. A real Graph may adopt many packages.
 					
