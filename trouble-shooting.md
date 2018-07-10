@@ -10,6 +10,10 @@ notes: - This is a fairly ad-hoc document. A compile bin of issues that may need
 
 # Trouble Shooting
 
+If a graph or package was working, but now is not then [update](updatingNQ.md).
+
+Alternatively, run through this check list:
+
 ## Step 1
 
 Verify that all prerequisite components are installed as per the [getting started guide](getting-started.md)
@@ -19,9 +23,10 @@ Verify that all prerequisite components are installed as per the [getting starte
 Identify the component that is failing. The PHP runtime environment must work with Composer.
 The two components NetworQ Web and NetworQ Cli must both be present.
 
-To use NetworQ web locally, your machine must have firewall settings to allow ports to be accessed.
 
 ### Need to know
+
+To use NetworQ web locally, your machine must have firewall settings to allow ports to be accessed.
 
 * In windows directory slashes are `\` while on Linux and Mac they are `/`. If something doesn't work, try using the "other" option. 
 * Editing a PATH variable only takes effect the next time bash starts. It is possible that the command line needs restarting or if all else fails, try restarting the whole machine.
@@ -58,6 +63,13 @@ Open http://localhost:54321 in a browser to start browsing the graph.
 ![Needs write up](/images/TS_ComposerError.PNG) 
 ![Needs write up](/images/TS_composerFail.PNG) 
 ![Needs write up](/images/TS_ComposerFail_PoorPHPLibSet.PNG) 
+
+
+Or this one:
+
+[1:58 PM] Joost Faassen: rm symfony.lock
+[1:58 PM] Joost Faassen: git checkout symfony.lock
+![Needs write up](/images/TS_SyncErrorSymfony.PNG)
 
 <img src="https://github.com/favicon.ico" width="48"> Found a typo or error? [Create a PR](https://github.com/networq/www.networq.io).
 

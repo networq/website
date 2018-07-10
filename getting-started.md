@@ -35,7 +35,7 @@ Two items are required:
 	- inspect graphs (list packages, types, nodes)
 	- install package dependencies
 
-### 1) Install NetowrQ Web
+### 1. Install NetowrQ Web
 
 * To install, use a command prompt to run:
 
@@ -46,7 +46,7 @@ Two items are required:
   $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
   
 ```
-### 2) Install NetworQ Cli
+### 2. Install NetworQ Cli
 
 Next, install the command-line utilities + package manager.
 
