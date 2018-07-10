@@ -37,20 +37,18 @@ Two items are required:
 
 ### 1. Install NetowrQ Web
 
-* To install, use a command prompt to run:
+To install, use a command prompt to run:
 
 ```
   $ git clone https://github.com/networq/networq-web
   $ cd networq-web # move to the directory
-  $ composer install # Install this projects dependencies
+  $ composer install # Install this project's dependencies
   $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
   
 ```
 ### 2. Install NetworQ Cli
 
-Next, install the command-line utilities + package manager.
-
-* Use a command prompt to run:
+Next, install the command-line utilities + package manager. Choose a suitable directory location and use a command prompt to run:
 
 ```
   $ git clone https://github.com/networq/networq-cli
@@ -65,7 +63,7 @@ A NetworQ package must exist. For this example we will use the [Holacracy Packag
 
 ### 1. Clone the package
 
-* Clone the package from Git using a command window directed at the folder location you want to store the clone in:
+Clone the package from Git using a command window directed at the folder location you want to store the clone in:
 
 ```
 $ git clone https://github.com/networq/holacracy-package
@@ -76,19 +74,21 @@ $ git clone https://github.com/networq/holacracy-package
 
 Install NetworQ to run this package. 
 
-* Change directory of the command window, to the folder containing your package, in this example the holacracy-package and run:
+Change directory of the command window, to the folder containing your package, in this example the holacracy-package and run:
 
 ```
-$ networq install # install dependencies into packages
+$ networq install 
 
 ```
 
-### 3. Configure NewtorQ to use the package
+The installation will create a directory "packages" and import all the dependency packages for your Graph.
+        
+### 3. Configure NewtorQ
 
 The directory networq-web contains an environment file. Configure the `NETWORQ_GRAPH` variable in the `.env` file to apply any valid NetworQ package.
 
 
-* The environmental settings may be adjusted using the command prompt: 
+The environmental settings may be adjusted using the command prompt: 
 
 ```
 $ edit .env # Adjust for your setup
@@ -100,7 +100,7 @@ $ edit .env # Adjust for your setup
 
 ```
 ini
-NETWORQ_GRAPH=C:\Users\bunny\Documents\GitHub\holacracy-package
+NETWORQ_GRAPH=C:\Users\ExampleUser\Documents\GitHub\holacracy-package
 NETWORQ_EXAMPLES=true
 
 ```

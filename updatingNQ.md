@@ -41,7 +41,7 @@ Set directory to networq-cli:
 
 <!--- stay DRY where possible, maybe after getting started is approved and proofed copy through? --->
 
-* Follow 2-4 of [getting started](getting-started.md)
+* Follow [2-4](getting-started.md#2.-Install-NetworQ) of installing networq in getting started.
 
 
 ## Test your success
