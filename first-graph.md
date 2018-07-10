@@ -40,7 +40,16 @@ The ability to use existing packages is a key functionality of NetworQ. For the 
 					
 ![Set up YAML](/images/createYAML2.PNG)
 
-### 5. Install NetworQ
+
+## Next Steps
+
+<!--- stay DRY where possible, maybe after getting started is approved and proofed copy through? --->
+
+* Follow 2-4 of [getting started](getting-started.md)
+
+
+
+### 5. **********
 
 Run the `networq install` command on your local directory, in this example old-skool-nqp. The installation will create a directory "packages" and import all the dependency packages for your Graph.
 				

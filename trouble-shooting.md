@@ -16,7 +16,7 @@ Alternatively, run through this check list:
 
 ## Step 1
 
-Verify that all prerequisite components are installed as per the [getting started guide](getting-started.md)
+Verify that all [prerequisite](getting-started.md#apply-a-package) components are installed as per the [getting started guide](getting-started.md).
 
 ## Step 2
 

@@ -41,7 +41,7 @@ Set directory to networq-cli:
 
 <!--- stay DRY where possible, maybe after getting started is approved and proofed copy through? --->
 
-* Follow 2-4 of getting started
+* Follow 2-4 of [getting started](getting-started.md)
 
 
 ## Test your success
