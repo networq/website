@@ -61,7 +61,9 @@ My assumption was that as we are setting up our own graph there is no example da
 4) [start the server](getting-started.md#4.-Start-the-server).
 
 Success will look something like this:
-![My First Graph Example Skool](FG_BaseSystem1.PNG)
+![My First Graph Example Skool](/images/FG_BaseSystem1.PNG)
+
+<!-- should we have a set up git ignore flow also?? -->
 
 ### 5. Create your first entity
 
