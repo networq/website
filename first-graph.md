@@ -49,7 +49,7 @@ The ability to use existing packages is a key functionality of NetworQ. For the 
 
 	- For this example the directory containing the old-skool-nqp and follow [2-4](getting-started.md#Apply-a-Package) of Applying a Package in getting started.
 
-	- If you followed the [getting started guide]((getting-started.md), these steps should be familiar:
+	- If you followed the [getting started guide](getting-started.md), these steps should be familiar:
 	2) [set up the dependencies](getting-started.md#2.-Install-NetworQ).
 	3) [configure NetworQ to use this old-skool-nqp](getting-started.md#3.-Configure-NewtorQ) as the local package. 
 
@@ -93,12 +93,10 @@ Creating these nodes may be achieved by:
 
 * old-skool.yaml
 
-	- This YAML must describe the organization.
+	- This YAML must describe the organization
 	- Complete as shown:
 <!-- Prettier as image- but not accessible friendly --->
 
-
-* old-skool.yaml
 
 networq:core:node:
   name: Old Skool
@@ -113,7 +111,7 @@ The ~ is shortcode to apply the document name. Therefore, in full, the `networq:
 
 * management.yaml
 
-	- This YAML must describe the management group.
+	- This YAML must describe the management group
 	- Complete as shown:
 <!-- Prettier as image- but not accessible friendly --->
 
@@ -126,7 +124,7 @@ networq:organization:group:
 
 * barack-obama.yaml
 
-	- This YAML must describe Barack Obama and his position in the school.
+	- This YAML must describe Barack Obama and his position in the school
 	- Complete as shown:
 <!-- Prettier as image- but not accessible friendly --->
 
@@ -163,19 +161,37 @@ I suspect that these are wrong, but identifying misconceptions is key, so let's 
 
 ## 7. Populate Old Skool 
 
-Our school needs more than a head teacher, let's give Obama some support in the form of Sarah Palin. She can be his assistant head and she will teach math. So, unlike Obama, she will belong to a couple of groups the management group and the teaching group.
+Our school needs more than a head teacher, let's give Obama some support in the form of Sarah Palin. She can be his assistant head and she will teach math. So, unlike Obama, she will belong to more than one groups, the management group and the teaching group.
+
+* teaching.yaml
+
+The management group already exists for Sarah to join, however we need to create a teaching group.
+
+	- This YAML must describe the teaching group
+	- Complete as shown:
+
+	networq:core:node:
+  name: Teaching group
+
+networq:organization:group:
+  parentGroup: old-skool:organization:management
+
+<!-- I am not sure why the parent group is management, if teachers are treated as one level below management in the school heirachy --->
 
 
 ## Notes from walk-through
 
-			add his links:
+			
 			name: 
 			image: (linkedin image link give image)
 			networq:organization:member
 			memberships:
 				barack-obama-managemenet:
 				management
-				networq:organization:membership[]
+				networq:organization:membership[] 
+
+<!-- where did [] get used??? I have checked YAMLs and none of them used multiples!! --->
+
 					group: old-skool:organization:managment
 					member: old-skool:organization:barak-obama
 					focus: Head Teacher
