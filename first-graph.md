@@ -41,16 +41,17 @@ The ability to use existing packages is a key functionality of NetworQ. For the 
 ![Set up YAML](/images/createYAML2.PNG)
 
 
-## Next Steps
+## 5. Configure NetworQ to run your package
 
 <!-- stay DRY where possible, maybe after getting started is approved and proofed copy through? --->
 
-* Set directory to networq-web and run command, in this example the directory containing the old-skool-nqp and follow [2-4](getting-started.md#2.-Install-NetworQ) of installing networq in getting started.
+* Set directory to networq-web to run the command `networq install`.
 
-If you followed the [getting started guide]((getting-started.md), these steps should be familiar:
+	- For this example the directory containing the old-skool-nqp and follow [2-4](getting-started.md#Apply-a-Package) of Applying a Package in getting started.
 
-2) [set up the dependencies](getting-started.md#2.-Install-NetworQ).
-3) [configure NetworQ to use this old-skool-nqp](getting-started.md#3.-Configure-NewtorQ) as the local package. 
+	- If you followed the [getting started guide]((getting-started.md), these steps should be familiar:
+	2) [set up the dependencies](getting-started.md#2.-Install-NetworQ).
+	3) [configure NetworQ to use this old-skool-nqp](getting-started.md#3.-Configure-NewtorQ) as the local package. 
 
 
 <!-- I had trouble getting old-skool going until I set examples = true, did not test fully to see if this was the fix.
@@ -65,13 +66,14 @@ Success will look something like this:
 
 <!-- should we have a set up git ignore flow also?? -->
 
-### 5. Create your first entity
+### 6. Create your first entity
 
 
-<!--- suggest that when `networq install` grabs packages and creates folder that an 5.1 done at the same time. --->
+<!--- suggest that when `networq install` grabs packages and if nodes folder = Nell, creates folder - then dump 6.1 below --->
 
-5.1 Create dir called nodes
-5.2 Create nodes to describe our first entity: Barack Obama. Barack
+6.1 Create dir called nodes
+
+#### 6.2 Create nodes to describe our first entity: Barack Obama. 
 
 Barak Obama will be the head teacher for our imaginary school. That concepts requires 3 nodes within our package.
 
@@ -86,6 +88,56 @@ Creating these nodes may be achieved by:
 * Or by running a local instance of networq-web and browsing via local host. The `New Node` button provides this functionality:
 
 ![Create a new node](/images/FG_CreatingNodeInterface.PNG)
+
+#### 6.3 Populate the YAML files
+
+* old-skool.yaml
+
+	- This YAML must describe the organization.
+	- Complete as shown:
+<!-- Prettier as image- but not accessible friendly --->
+
+
+networq:core:node:
+  name: Old Skool
+  description: This is the Old Skool organization
+networq:organization:organization: ~
+networq:organization:group: ~
+
+![Old Skool YAML](/images/FG_old-schoolYAML.PNG)
+
+
+* management.yaml
+
+	- This YAML must describe the management group.
+	- Complete as shown:
+<!-- Prettier as image- but not accessible friendly --->
+
+networq:core:node:
+name: Management group
+networq:organization:group:
+  parentGroup: old-skool:organization:old-skool
+
+![Management YAML](/images/FG_managementYAML.PNG)
+
+* barack-obama.yaml
+
+	- This YAML must describe Barack Obama and his position in the school.
+	- Complete as shown:
+<!-- Prettier as image- but not accessible friendly --->
+
+  networq:core:node:
+  name: Barack Obama
+  image: (enterURL)
+networq:organization:member:
+  memberships:
+    barack-obama-management:
+      networq:organization:membership:
+        group: old-skool:organization:management
+        member: old-skool:organization:barack-obama
+        focus: Head teacher
+
+![Management YAML](/images/FG_barack-obamaYAML.PNG)
 
 
 <!-- This example must be wrapped up by reiterating the naming conventions for this example- using same format as the concepts.md --->
