@@ -106,6 +106,8 @@ networq:organization:group: ~
 
 ![Old Skool YAML](/images/FG_old-schoolYAML.PNG)
 
+<! -- is this the same as $ - or is ~ doing something different here? --->
+
 The ~ is shortcode to apply the document name. Therefore, in full, the `networq:organization:organization: ~` becomes `networq:organization:organization:old-skool`
 
 
@@ -115,10 +117,13 @@ The ~ is shortcode to apply the document name. Therefore, in full, the `networq:
 	- Complete as shown:
 <!-- Prettier as image- but not accessible friendly --->
 
+```
 networq:core:node:
 name: Management group
 networq:organization:group:
   parentGroup: old-skool:organization:old-skool
+
+```
 
 ![Management YAML](/images/FG_managementYAML.PNG)
 
@@ -127,7 +132,7 @@ networq:organization:group:
 	- This YAML must describe Barack Obama and his position in the school
 	- Complete as shown:
 <!-- Prettier as image- but not accessible friendly --->
-
+```
   networq:core:node:
   name: Barack Obama
   image: (enterURL)
@@ -138,6 +143,7 @@ networq:organization:member:
         group: old-skool:organization:management
         member: old-skool:organization:barack-obama
         focus: Head teacher
+ ```
 
 ![Management YAML](/images/FG_barack-obamaYAML.PNG)
 
@@ -170,11 +176,13 @@ The management group already exists for Sarah to join, however we need to create
 	- This YAML must describe the teaching group
 	- Complete as shown:
 
+```
 	networq:core:node:
   name: Teaching group
 
 networq:organization:group:
   parentGroup: old-skool:organization:management
+ ```
 
 <!-- I am not sure why the parent group is management, if teachers are treated as one level below management in the school heirachy --->
 
