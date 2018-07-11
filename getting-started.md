@@ -85,7 +85,7 @@ The installation will create a directory "packages" and import all the dependenc
         
 ### 3. Configure NewtorQ
 
-The directory networq-web contains an environment file. Configure the `NETWORQ_GRAPH` variable in the `.env` file to apply any valid NetworQ package.
+The directory `networq-web` contains an environment file. Configure the `NETWORQ_GRAPH` variable in the `.env` file to apply any valid NetworQ package.
 
 
 The environmental settings may be adjusted using the command prompt: 

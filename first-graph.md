@@ -21,7 +21,7 @@ This work-through will create an imaginary traditional school headed by Barak Ob
 The school name provides our package name; `old-skool-nqp` 
 (following the convention to name a package with the tail "NetworQ package": `nqp`).
 
-### 2. Create the YAML
+### 2. Create the YAML package file
 
 The [YAML](https://en.wikipedia.org/wiki/YAML) files in NetworQ are used as your data store, and for configuration. Create a YAML in your directory called package.yaml.
 
@@ -66,14 +66,14 @@ Success will look something like this:
 
 <!-- should we have a set up git ignore flow also?? -->
 
-### 6. Create your first entity
+## 6. Create your first entity
 
 
-<!--- suggest that when `networq install` grabs packages and if nodes folder = Nell, creates folder - then dump 6.1 below --->
+<!--- suggest that when `networq install` grabs packages and if nodes folder=Null, creates nodes folder - then dump 6.1 below --->
 
 6.1 Create dir called nodes
 
-#### 6.2 Create nodes to describe our first entity: Barack Obama. 
+### 6.2 Create nodes to describe our first entity: Barack Obama. 
 
 Barak Obama will be the head teacher for our imaginary school. That concepts requires 3 nodes within our package.
 
@@ -89,7 +89,7 @@ Creating these nodes may be achieved by:
 
 ![Create a new node](/images/FG_CreatingNodeInterface.PNG)
 
-#### 6.3 Populate the YAML files
+### 6.3 Populate the YAML Node files
 
 * old-skool.yaml
 
@@ -98,6 +98,8 @@ Creating these nodes may be achieved by:
 <!-- Prettier as image- but not accessible friendly --->
 
 
+* old-skool.yaml
+
 networq:core:node:
   name: Old Skool
   description: This is the Old Skool organization
@@ -105,6 +107,8 @@ networq:organization:organization: ~
 networq:organization:group: ~
 
 ![Old Skool YAML](/images/FG_old-schoolYAML.PNG)
+
+The ~ is shortcode to apply the document name. Therefore, in full, the `networq:organization:organization: ~` becomes `networq:organization:organization:old-skool`
 
 
 * management.yaml
@@ -143,7 +147,26 @@ networq:organization:member:
 <!-- This example must be wrapped up by reiterating the naming conventions for this example- using same format as the concepts.md --->
 
 
-## Working Here
+## Reinforce the naming conventions
+
+We now have an example to apply our naming concepts to.
+
+<!-- My thinking is we have 3 nodes, therefore we have 3 FQNNs as examples now, right? --->
+
+![concepts for this example](/images/FG_FQNN.PNG)
+
+
+I suspect that these are wrong, but identifying misconceptions is key, so let's load 'em all up:
+
+![concepts for this example](/images/FG_FQNN-Examples.PNG)
+
+
+## 7. Populate Old Skool 
+
+Our school needs more than a head teacher, let's give Obama some support in the form of Sarah Palin. She can be his assistant head and she will teach math. So, unlike Obama, she will belong to a couple of groups the management group and the teaching group.
+
+
+## Notes from walk-through
 
 			add his links:
 			name: 

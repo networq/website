@@ -25,8 +25,9 @@ Within the same networq-web directory run this command:
 ```
 	$ composer install # install / update latest dependencies
 ```
+## Updating NetworQ-cli
 
-## Updating networq-cli
+## 1. Updating networq-cli
 
 
 Set directory to networq-cli:
@@ -35,6 +36,13 @@ Set directory to networq-cli:
 ```
 	$ git pull
 
+```
+### 2. Update the dependencies using Composer
+
+Within the same networq-cli directory run this command:
+
+```
+	$ composer install # install / update latest dependencies
 ```
 
 ## Next Steps
