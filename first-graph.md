@@ -60,14 +60,11 @@ The ability to use existing packages is a key functionality of NetworQ. For the 
 
 Using the directory containing your old skool package, follow :
 	
-  - 1) [2-4](getting-started.md#Apply-a-Package) of Applying a Package in Getting Started.
 
-	- If you followed the [getting started guide](getting-started.md), these steps should be familiar:
-	2) [set up the dependencies](getting-started.md#2.-Install-NetworQ).
-	3) [configure NetworQ to use this old-skool-nqp](getting-started.md#3.-Configure-NewtorQ) as the local package. 
-
-
-	4) [start the server](getting-started.md#4.-Start-the-server).
+5.1) [2-4](getting-started.md#Apply-a-Package) of Applying a Package in Getting Started.
+5.2) [set up the dependencies](getting-started.md#2.-Install-NetworQ).
+5.3) [configure NetworQ to use this old-skool-nqp](getting-started.md#3.-Configure-NewtorQ) as the local package. 
+5.4) [start the server](getting-started.md#4.-Start-the-server).
 
 Success will look something like this:
 ![My First Graph Example Skool](/images/FG_BaseSystem1.PNG)
@@ -92,7 +89,7 @@ Barack Obama will be the head teacher for our imaginary school. That concepts re
 Barack is an individual. Management is a group and School is an organisation. The management and organisation nodes are inherited from existing packages and so provide various types.
 
 	
-Creating these nodes may be achieved by:
+Creating these nodes may be achieved by applying the following techniques:
 
 * Creating 3 YAML files in the nodes directory. 
 
@@ -153,10 +150,10 @@ networq:organization:member:
 
 ### 8. Create your second entity
 
-To reinforce the concept, and introduce some short codes, let's give the school a teacher. Sarah Palin will be our Head of Mathematics and Barack Obama's assistant head. So, unlike Obama, she will belong to more than one group, the management group and the teaching group.
+To reinforce the concept, and introduce some short codes, let's give the school a teacher. Sarah Palin will be our Head of Mathematics and Barack Obama's assistant head. Sarah will, therefore, belong to more than one group, the management group and the teaching group.
 
 #### 8.1 Create the nodes for your entity
-The management group already exists for Sarah to join, however we need to create a teaching group. The teaching group is, as per a traditional school heirachy, sits under the management group.
+The management group already exists for Sarah to join, however we need to create a teaching group. The teaching group, as per a traditional school heirachy, sits under the management group.
 
 * teaching.yaml
 
