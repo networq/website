@@ -3,7 +3,7 @@
 draft: True
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
-spellChecked: F
+spellChecked: Y
 notes:  - Priority doc. Part of Task 1
 ---
 
@@ -36,7 +36,7 @@ For example:
 
 ### 4. Set up dependencies
 
-The ability to use existing packages is a key functionality of NetworQ. For the sake of brevity this example will use a minimal dependency list. A real Graph may adopt many packages.
+The ability to use existing packages is a key functionality of NetworQ. For the sake of brevity, this example will use a minimal dependency list. A real Graph may adopt many packages.
 
 * Complete as shown:
 
@@ -77,16 +77,16 @@ NetworQ installed dependent packages into a package directory. Rather than push 
 
 ### 7. Create your first entity
 
-#### 7.1 Create dir called `nodes`.
+#### 7.1 Create a directory called `nodes`.
 
 
 #### 7.2 Create nodes to describe our first entity: Barack Obama. 
 
 <! --- NB this flow does not include creation of types- this must be dealt with in another flow --->
 
-Barack Obama will be the head teacher for our imaginary school. That concepts requires 3 nodes within our package.
+Barack Obama will be the head teacher for our imaginary school. That concept requires 3 nodes within our package.
 
-Barack is an individual. Management is a group and School is an organisation. The management and organisation nodes are inherited from existing packages and so provide various types.
+Barack is an individual. Management is a group and School is an organization. The management and organisation nodes are inherited from existing packages and so provide various types.
 
 	
 Creating these nodes may be achieved by applying the following techniques:
@@ -95,7 +95,7 @@ Creating these nodes may be achieved by applying the following techniques:
 
 ![3 nodes, 3 YAML files](/images/FG_3Nodes3YAML.PNG).
 
-* Or by running a local instance of networq-web and browsing via local host. The `New Node` button provides this functionality:
+* Or by running a local instance of networq-web and browsing via localhost. The `New Node` button provides this functionality:
 
 ![Create a new node](/images/FG_CreatingNodeInterface.PNG)
 
@@ -107,9 +107,8 @@ Creating these nodes may be achieved by applying the following techniques:
 	- Complete as shown:
 
 ```yaml
-
-	networq:core:node:
-  name: Old Skool
+networq:core:node:
+name: Old Skool
   description: This is the Old Skool organization
 networq:organization:organization: ~
 networq:organization:group: ~
@@ -150,10 +149,10 @@ networq:organization:member:
 
 ### 8. Create your second entity
 
-To reinforce the concept, and introduce some short codes, let's give the school a teacher. Sarah Palin will be our Head of Mathematics and Barack Obama's assistant head. Sarah will, therefore, belong to more than one group, the management group and the teaching group.
+To reinforce the concept, and introduce some shortcodes, let's give the school a teacher. Sarah Palin will be our Head of Mathematics and Barack Obama's assistant head. Sarah will, therefore, belong to more than one group, the management group, and the teaching group.
 
 #### 8.1 Create the nodes for your entity
-The management group already exists for Sarah to join, however we need to create a teaching group. The teaching group, as per a traditional school heirachy, sits under the management group.
+The management group already exists for Sarah to join however, we need to create a teaching group. The teaching group, as per a traditional school hierachy, sits under the management group.
 
 * teaching.yaml
 
@@ -161,9 +160,8 @@ The management group already exists for Sarah to join, however we need to create
 	- Complete as shown:
 
 ```yaml
-	networq:core:node:
-  name: Teaching group
-
+networq:core:node:
+name: Teaching group
 networq:organization:group:
   parentGroup: old-skool:organization:management
  ```
@@ -177,7 +175,6 @@ networq:organization:group:
 networq:core:node:
   name: Sarah Palin
   image: (enter URL)
-
 networq:organization:member:
   memberships:
     ~teaching:
@@ -192,8 +189,8 @@ networq:organization:member:
         focus: Head of Math
 ```
 
-Notice the use of $ here as short code to apply the document name. Similarly [] signifies many.
-networq:organization:membership[], for example denote multiple memberships.
+Notice the use of $ here as shortcode to apply the document name. Similarly [] signifies many.
+networq:organization:membership[], for example, denotes multiple memberships.
 
 ## Congratulations
 
