@@ -3,7 +3,7 @@
 draft: True
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
-spellChecked: F
+spellChecked: T
 notes:  - Priority doc, can't get second local host to render on gh as sub-bullet (!)
 ---
 
@@ -59,7 +59,7 @@ Next, install the command-line utilities + package manager. Choose a suitable di
 
 ## Apply a Package
 
-A NetworQ package must exist. For this example we will use the [Holacracy Package](https://github.com/networq/holacracy-package).
+A NetworQ package must exist. For this example, we will use the [Holacracy Package](https://github.com/networq/holacracy-package).
 
 ### 1. Clone the package
 
@@ -74,12 +74,7 @@ $ git clone https://github.com/networq/holacracy-package
 
 Install NetworQ to run this package. 
 
-Change directory of the command window, to the folder containing your package, in this example the holacracy-package and run:
-
-```
-$ networq install 
-
-```
+Change directory of the command window, to the folder containing your package, in this example the holacracy-package and run `networq install`.
 
 The installation will create a directory "packages" and import all the dependency packages for your Graph.
         
