@@ -4,7 +4,7 @@ draft: True
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
 spellChecked: F
-notes:  - Priority doc. Part of Task 1 (Task 1 bleeding through to Task 2)
+notes:  - Priority doc. Part of Task 1
 ---
 
 # Create your first Graph
@@ -14,7 +14,7 @@ notes:  - Priority doc. Part of Task 1 (Task 1 bleeding through to Task 2)
 
 ## Worked example
 
-This work-through will create an imaginary traditional school headed by Barak Obama.
+This work-through will create an imaginary school headed by Barack Obama.
 
 ### 1. Create a directory 
 
@@ -40,45 +40,48 @@ The ability to use existing packages is a key functionality of NetworQ. For the 
 					
 ![Set up YAML](/images/createYAML2.PNG)
 
+* Set directory to old-skool to run the command `networq install`.
 
-## 5. Configure NetworQ to run your package
 
-<!-- stay DRY where possible, maybe after getting started is approved and proofed copy through? --->
+### 5. Configure NetworQ to run your package
 
-* Set directory to networq-web to run the command `networq install`.
+<!-- This section is repetition from getting started - need a DRY methodology applied here --->
 
-	- For this example the directory containing the old-skool-nqp and follow [2-4](getting-started.md#Apply-a-Package) of Applying a Package in getting started.
+
+	- Using the directory containing your old skool package, follow :
+	[2-4](getting-started.md#Apply-a-Package) of Applying a Package in Getting Started.
 
 	- If you followed the [getting started guide](getting-started.md), these steps should be familiar:
 	2) [set up the dependencies](getting-started.md#2.-Install-NetworQ).
 	3) [configure NetworQ to use this old-skool-nqp](getting-started.md#3.-Configure-NewtorQ) as the local package. 
 
 
-<!-- I had trouble getting old-skool going until I set examples = true, did not test fully to see if this was the fix.
-
-My assumption was that as we are setting up our own graph there is no example data therefore the switch `NETWORQ_EXAMPLES=false`, may be left untouched. --->
-
-
-4) [start the server](getting-started.md#4.-Start-the-server).
+	4) [start the server](getting-started.md#4.-Start-the-server).
 
 Success will look something like this:
 ![My First Graph Example Skool](/images/FG_BaseSystem1.PNG)
 
 <!-- should we have a set up git ignore flow also?? -->
 
-## 6. Create your first entity
+### 6. Git Ignore
+
+Once you define the packages you will use, NetworQ will install these into a package directory. Rather than push these back to git hub it is best to set up a git ignore. In the old-skool-nqp directory, set up a git ignore file for the packages directory:
+`packages/`.
+
+### 7. Create your first entity
+
+#### 7.1 Create dir called `nodes`
 
 
-<!--- suggest that when `networq install` grabs packages and if nodes folder=Null, creates nodes folder - then dump 6.1 below --->
+#### 7.2 Create nodes to describe our first entity: Barack Obama. 
 
-6.1 Create dir called nodes
+<! --- NB this flow does not include creation of types- this must be dealt with in another flow --->
 
-### 6.2 Create nodes to describe our first entity: Barack Obama. 
+Barack Obama will be the head teacher for our imaginary school. That concepts requires 3 nodes within our package.
 
-Barak Obama will be the head teacher for our imaginary school. That concepts requires 3 nodes within our package.
+Barack is an individual. Management is a group and School is an organisation. The management and organisation nodes are inherited from existing packages and so provide various types.
 
-![One entity may require many nodes to describe them](/images/FG_1Entity3Nodes.PNG)			
-
+	
 Creating these nodes may be achieved by:
 
 * Creating 3 YAML files in the nodes directory. 
@@ -89,35 +92,29 @@ Creating these nodes may be achieved by:
 
 ![Create a new node](/images/FG_CreatingNodeInterface.PNG)
 
-### 6.3 Populate the YAML Node files
+#### 7.3 Populate the YAML Node files
 
 * old-skool.yaml
 
 	- This YAML must describe the organization
 	- Complete as shown:
-<!-- Prettier as image- but not accessible friendly --->
 
+```yaml
 
-networq:core:node:
+	networq:core:node:
   name: Old Skool
   description: This is the Old Skool organization
 networq:organization:organization: ~
 networq:organization:group: ~
-
-![Old Skool YAML](/images/FG_old-schoolYAML.PNG)
-
-<! -- is this the same as $ - or is ~ doing something different here? --->
-
-The ~ is shortcode to apply the document name. Therefore, in full, the `networq:organization:organization: ~` becomes `networq:organization:organization:old-skool`
-
+```
 
 * management.yaml
 
 	- This YAML must describe the management group
 	- Complete as shown:
-<!-- Prettier as image- but not accessible friendly --->
 
-```
+```yaml
+
 networq:core:node:
 name: Management group
 networq:organization:group:
@@ -125,17 +122,16 @@ networq:organization:group:
 
 ```
 
-![Management YAML](/images/FG_managementYAML.PNG)
 
 * barack-obama.yaml
 
 	- This YAML must describe Barack Obama and his position in the school
 	- Complete as shown:
-<!-- Prettier as image- but not accessible friendly --->
-```
+
+```yaml
   networq:core:node:
   name: Barack Obama
-  image: (enterURL)
+  image: (enter URL)
 networq:organization:member:
   memberships:
     barack-obama-management:
@@ -145,38 +141,19 @@ networq:organization:member:
         focus: Head teacher
  ```
 
-![Management YAML](/images/FG_barack-obamaYAML.PNG)
+### 8. Create your second entity
 
+To reinforce the concept, and introduce some short codes, let's give the school a teacher. Sarah Palin will be our Head of Mathematics and Barack Obama's assistant head. So, unlike Obama, she will belong to more than one group, the management group and the teaching group.
 
-<!-- This example must be wrapped up by reiterating the naming conventions for this example- using same format as the concepts.md --->
-
-
-## Reinforce the naming conventions
-
-We now have an example to apply our naming concepts to.
-
-<!-- My thinking is we have 3 nodes, therefore we have 3 FQNNs as examples now, right? --->
-
-![concepts for this example](/images/FG_FQNN.PNG)
-
-
-I suspect that these are wrong, but identifying misconceptions is key, so let's load 'em all up:
-
-![concepts for this example](/images/FG_FQNN-Examples.PNG)
-
-
-## 7. Populate Old Skool 
-
-Our school needs more than a head teacher, let's give Obama some support in the form of Sarah Palin. She can be his assistant head and she will teach math. So, unlike Obama, she will belong to more than one groups, the management group and the teaching group.
+#### 8.1 Create the nodes for your entity
+The management group already exists for Sarah to join, however we need to create a teaching group. The teaching group is, as per a traditional school heirachy, sits under the management group.
 
 * teaching.yaml
-
-The management group already exists for Sarah to join, however we need to create a teaching group.
 
 	- This YAML must describe the teaching group
 	- Complete as shown:
 
-```
+```yaml
 	networq:core:node:
   name: Teaching group
 
@@ -184,39 +161,36 @@ networq:organization:group:
   parentGroup: old-skool:organization:management
  ```
 
-<!-- I am not sure why the parent group is management, if teachers are treated as one level below management in the school heirachy --->
+* sarah-palin.yaml
 
+	- This YAML must describe Sarah Palin and her position within the school
+	- Complete as shown:
 
-## Notes from walk-through
+```yaml
+networq:core:node:
+  name: Sarah Palin
+  image: (enter URL)
 
-			
-			name: 
-			image: (linkedin image link give image)
-			networq:organization:member
-			memberships:
-				barack-obama-managemenet:
-				management
-				networq:organization:membership[] 
+networq:organization:member:
+  memberships:
+    ~teaching:
+      networq:organization:membership:
+        group: old-skool:organization:teaching
+        member: $
+        focus: Math
+    ~management:
+      networq:organization:membership:
+        group: old-skool:organization:management
+        member: $
+        focus: Head of Math
+```
 
-<!-- where did [] get used??? I have checked YAMLs and none of them used multiples!! --->
+Notice the use of $ here as short code to apply the document name. Similarly [] signifies many.
+networq:organization:membership[], for example denote multiple memberships.
 
-					group: old-skool:organization:managment
-					member: old-skool:organization:barak-obama
-					focus: Head Teacher
+## Congratulations
 
-
-		NB the [] allows multiple
-
-membership links member to the group (gym card links you to the gym)
-
-10. copied management group - to use - teaching group set up UNDER management group i.e. parent group of teaching group is managment - 
-group = teaching
-member= sarah-palin ($ is short hand notation to use name)
-focus: math
-
-11. Added her as management- Head of Math
-
-
+You have created your first graph and applied some of the basic concepts involved in making use of existing packages. This system may be used for myriad purposes. One of the early applications developed is for institutional management applying the [Holacracy](https://github.com/networq/holacracy-nqp) architecture.
 
 <img src="https://github.com/favicon.ico" width="48"> Found a typo or error? [Create a PR](https://github.com/networq/www.networq.io).
 
