@@ -60,10 +60,9 @@ The ability to use existing packages is a key functionality of NetworQ. For the 
 
 Using the directory containing your old skool package, follow :
 	
-
 5.1) [2-4](getting-started.md#Apply-a-Package) of Applying a Package in Getting Started.
 5.2) [set up the dependencies](getting-started.md#2.-Install-NetworQ).
-5.3) [configure NetworQ to use this old-skool-nqp](getting-started.md#3.-Configure-NewtorQ) as the local package. 
+5.3) [configure NetworQ](getting-started.md#3.-Configure-NewtorQ) to use this old-skool-nqp as the local package. 
 5.4) [start the server](getting-started.md#4.-Start-the-server).
 
 Success will look something like this:
