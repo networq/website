@@ -82,7 +82,7 @@ NetworQ installed dependent packages into a package directory. Rather than push 
 
 #### 7.2 Create nodes to describe our first entity: Barack Obama. 
 
-<! --- NB this flow does not include creation of types- this must be dealt with in another flow --->
+<!-- NB this flow does not include creation of types- this must be dealt with in another flow --->
 
 Barack Obama will be the head teacher for our imaginary school. That concept requires 3 nodes within our package.
 
