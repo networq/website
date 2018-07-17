@@ -42,10 +42,9 @@ The ability to use existing packages is a key functionality of NetworQ. For the 
 
   ```yaml
   name: old-skool:organization
-description: Old Skool Organization Graph
-license: MIT
-
-dependencies:
+	description: Old Skool Organization Graph
+	license: MIT
+	dependencies:
   networq:core: latest # essential
   networq:resource: latest
   networq:organization: latest
