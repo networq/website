@@ -37,19 +37,31 @@ For example:
 ### 4. Set up dependencies
 
 The ability to use existing packages is a key functionality of NetworQ. For the sake of brevity this example will use a minimal dependency list. A real Graph may adopt many packages.
-					
-![Set up YAML](/images/createYAML2.PNG)
 
-* Set directory to old-skool to run the command `networq install`.
+* Complete as shown:
 
+  ```yaml
+  name: old-skool:organization
+description: Old Skool Organization Graph
+license: MIT
+
+dependencies:
+  networq:core: latest # essential
+  networq:resource: latest
+  networq:organization: latest
+  networq:linkedin: latest
+  networq:skype: latest
+  networq:contract: latest
+  ```
+* Set directory to old-skool-nqp and run the command `networq install`.
 
 ### 5. Configure NetworQ to run your package
 
 <!-- This section is repetition from getting started - need a DRY methodology applied here --->
 
-
-	- Using the directory containing your old skool package, follow :
-	[2-4](getting-started.md#Apply-a-Package) of Applying a Package in Getting Started.
+Using the directory containing your old skool package, follow :
+	
+  - 1) [2-4](getting-started.md#Apply-a-Package) of Applying a Package in Getting Started.
 
 	- If you followed the [getting started guide](getting-started.md), these steps should be familiar:
 	2) [set up the dependencies](getting-started.md#2.-Install-NetworQ).
@@ -61,16 +73,15 @@ The ability to use existing packages is a key functionality of NetworQ. For the 
 Success will look something like this:
 ![My First Graph Example Skool](/images/FG_BaseSystem1.PNG)
 
-<!-- should we have a set up git ignore flow also?? -->
 
 ### 6. Git Ignore
 
-Once you define the packages you will use, NetworQ will install these into a package directory. Rather than push these back to git hub it is best to set up a git ignore. In the old-skool-nqp directory, set up a git ignore file for the packages directory:
+NetworQ installed dependent packages into a package directory. Rather than push these back to git hub it is best to set up a git ignore. In the old-skool-nqp directory, set up a git ignore file for the packages directory:
 `packages/`.
 
 ### 7. Create your first entity
 
-#### 7.1 Create dir called `nodes`
+#### 7.1 Create dir called `nodes`.
 
 
 #### 7.2 Create nodes to describe our first entity: Barack Obama. 
