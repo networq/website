@@ -38,11 +38,10 @@ Two items are required:
 To install, use a command prompt to run:
 
 ```
-  $ git clone https://github.com/networq/networq-web
-  $ cd networq-web # move to the directory
-  $ composer install # Install this project's dependencies
-  $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
-  
+$ git clone https://github.com/networq/networq-web
+$ cd networq-web # move to the directory
+$ composer install # Install this project's dependencies
+$ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
 ```
 ### 2. Install NetworQ Cli
 
@@ -74,7 +73,7 @@ Change directory of the command window, to the folder containing your package, i
 
 The installation will create a directory "packages" and import all the dependency packages for your Graph.
         
-### 3. Configure NewtorQ
+### 3. Configure NetworQ
 
 The directory `networq-web` contains an environment file. Configure the `NETWORQ_GRAPH` variable in the `.env` file to apply any valid NetworQ package.
 
@@ -102,7 +101,6 @@ NETWORQ_EXAMPLES=true
 - Set the NETWORQ_EXAMPLES to true.
 - Save and close the file.
 
-
 ![edit .env](/images/Install4_Holacracy.PNG) 
 
 Setting `NETWORQ_EXAMPLES=true` loads any example nodes found in the `examples/` directory of the root package.
@@ -112,7 +110,7 @@ Setting `NETWORQ_EXAMPLES=true` loads any example nodes found in the `examples/`
 * Using a command prompt pointed at the directory **networq-web** run the server using:
 
 ```
-    $ php -S 0.0.0.0:8080 -t public/
+$ php -S 0.0.0.0:8080 -t public/
 ```
 
 * Open http://localhost:8080/ in a browser to start browsing the graph.
