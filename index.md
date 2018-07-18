@@ -14,7 +14,9 @@ Use it to organize your business, team, project, assests, infrastructure, life a
 
 ## What can I use NetworQ for?
 
-We've collected a set of use-cases to inspire you [here](use-cases/). Your ingenuity and imagination is all that restricts further application. Check out our [community forum](#) for more ideas.
+We've collected a set of use-cases to inspire you [here](use-cases/). Your ingenuity and imagination is all that restricts further application. 
+
+<!-- Check out our [community forum](#) for more ideas. -->
 
 ## A 3 layer model
 
