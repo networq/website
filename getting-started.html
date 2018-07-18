@@ -68,11 +68,10 @@ NB further system-dependent instructions for installing composer are available <
 </ul>
 <h3 id="1-install-networq-web">1. Install NetworQ Web</h3>
 <p>To install, use a command prompt to run:</p>
-<pre><code>  $ git clone https://github.com/networq/networq-web
-  $ cd networq-web # move to the directory
-  $ composer install # Install this project's dependencies
-  $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
-</code></pre>
+<pre><code>$ git clone https://github.com/networq/networq-web
+$ cd networq-web # move to the directory
+$ composer install # Install this project's dependencies
+$ cp .env.dist .env # Copy the included `.env.dist` file to `.env`</code></pre>
 <h3 id="2-install-networq-cli">2. Install NetworQ Cli</h3>
 <p>Next, install the command-line utilities + package manager. Choose a suitable directory location and use a command prompt to run:</p>
 <pre><code>$ git clone https://github.com/networq/networq-cli
@@ -87,7 +86,7 @@ $ composer install</code></pre>
 <p>Install NetworQ to run this package. </p>
 <p>Change directory of the command window, to the folder containing your package, in this example the holacracy-nqp and run <code>networq install</code>.</p>
 <p>The installation will create a directory &quot;packages&quot; and import all the dependency packages for your Graph.</p>
-<h3 id="3-configure-newtorq">3. Configure NewtorQ</h3>
+<h3 id="3-configure-networq">3. Configure NetworQ</h3>
 <p>The directory <code>networq-web</code> contains an environment file. Configure the <code>NETWORQ_GRAPH</code> variable in the <code>.env</code> file to apply any valid NetworQ package.</p>
 <p>The environmental settings may be adjusted using the command prompt: </p>
 <pre><code>$ edit .env # Adjust for your setup</code></pre>
@@ -112,7 +111,7 @@ NETWORQ_EXAMPLES=true</code></pre>
 <ul>
 <li>Using a command prompt pointed at the directory <strong>networq-web</strong> run the server using:</li>
 </ul>
-<pre><code>    $ php -S 0.0.0.0:8080 -t public/</code></pre>
+<pre><code>$ php -S 0.0.0.0:8080 -t public/</code></pre>
 <ul>
 <li>Open <a href="http://localhost:8080/">http://localhost:8080/</a> in a browser to start browsing the graph.</li>
 </ul>
