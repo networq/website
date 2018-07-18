@@ -46,16 +46,83 @@
 
 <!-- CONTENT START -->
 <h1 id="getting-started">Getting started</h1>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>This guide has the following pre-requisites:</p>
+<h2 id="prerequisites-for-installing-networq">Prerequisites for Installing NetworQ</h2>
+<p>The following prerequisites must be met before undertaking the installation:</p>
+<p>1) You are familiar with using <a href="https://git-scm.com/">Git</a></p>
+<p>2) You are familiar with editing <a href="https://wikipedia.org/wiki/YAML">YAML</a></p>
+<p>3) You are able to run (<a href="http://php.net/downloads.php">minimum version 7</a>) <a href="https://php.net">PHP</a> applications on your machine</p>
+<p>4) You are able to run <a href="https://getcomposer.org/">Composer</a>
+NB further system-dependent instructions for installing composer are available <a href="https://getcomposer.org/doc/00-intro.html">here</a></p>
+<p>If one or more of these conditions are not met, don't worry. Rather, check out the <a href="demo.html">demo</a> installation instead!</p>
+<h2 id="install">Install</h2>
+<p>Two items are required:</p>
 <ul>
-<li>You are familiar with using <a href="https://git-scm.com/">Git</a></li>
-<li>You are familiar with <a href="https://wikipedia.org/wiki/YAML">YAML</a></li>
-<li>You are able to run <a href="https://php.net">PHP</a> applications on your machine.</li>
+<li>
+<p>&quot;NetworQ Web&quot; is our web-based viewer application. You can configure it to load a Graph of your choice and browse it.</p>
+</li>
+<li>&quot;NetworQ Cli&quot; is a command-line utility used to:
+<ul>
+<li>inspect graphs (list packages, types, nodes)</li>
+<li>install package dependencies</li>
+</ul></li>
 </ul>
-<p>If one or more of these items are not fullfilled, then don't worry: Check the <a href="demo.html">demo</a> installation instead!</p>
-<h2 id="installating-networq-web">Installating Networq Web</h2>
-<p>&quot;Networq Web&quot; is our web-based viewer application. You can configure it to load a Graph of your choice and browse it.</p>
+<h3 id="1-install-networq-web">1. Install NetworQ Web</h3>
+<p>To install, use a command prompt to run:</p>
+<pre><code>  $ git clone https://github.com/networq/networq-web
+  $ cd networq-web # move to the directory
+  $ composer install # Install this project's dependencies
+  $ cp .env.dist .env # Copy the included `.env.dist` file to `.env`
+</code></pre>
+<h3 id="2-install-networq-cli">2. Install NetworQ Cli</h3>
+<p>Next, install the command-line utilities + package manager. Choose a suitable directory location and use a command prompt to run:</p>
+<pre><code>$ git clone https://github.com/networq/networq-cli
+$ cd networq-cli
+$ composer install</code></pre>
+<h2 id="apply-a-package">Apply a Package</h2>
+<p>A NetworQ package must exist. For this example, we will use the <a href="https://github.com/networq/holacracy-nqp">Holacracy Package</a>.</p>
+<h3 id="1-clone-the-package">1. Clone the package</h3>
+<p>Clone the package from Git using a command window directed at the folder location you want to store the clone in:</p>
+<pre><code>$ git clone https://github.com/networq/holacracy-nqp</code></pre>
+<h3 id="2-install-networq">2. Install NetworQ</h3>
+<p>Install NetworQ to run this package. </p>
+<p>Change directory of the command window, to the folder containing your package, in this example the holacracy-nqp and run <code>networq install</code>.</p>
+<p>The installation will create a directory &quot;packages&quot; and import all the dependency packages for your Graph.</p>
+<h3 id="3-configure-newtorq">3. Configure NewtorQ</h3>
+<p>The directory <code>networq-web</code> contains an environment file. Configure the <code>NETWORQ_GRAPH</code> variable in the <code>.env</code> file to apply any valid NetworQ package.</p>
+<p>The environmental settings may be adjusted using the command prompt: </p>
+<pre><code>$ edit .env # Adjust for your setup</code></pre>
+<!-- Joost this is from your email, I assume that it is valid for Linux/Macs --->
+<ul>
+<li>Define the settings via the command prompt:</li>
+</ul>
+<pre><code class="language-ini">NETWORQ_GRAPH=/path/to/holacracy-nqp
+NETWORQ_EXAMPLES=true</code></pre>
+<ul>
+<li>Or edit the file directly. Browse to the file:</li>
+</ul>
+<p><img src="/images/edit_envWin.PNG" alt="edit .env" /> </p>
+<ul>
+<li>Set the value of NETWORQ_GRAPH to the folder containing the package.</li>
+<li>Set the NETWORQ_EXAMPLES to true.</li>
+<li>Save and close the file.</li>
+</ul>
+<p><img src="/images/Install4_Holacracy.PNG" alt="edit .env" /> </p>
+<p>Setting <code>NETWORQ_EXAMPLES=true</code> loads any example nodes found in the <code>examples/</code> directory of the root package.</p>
+<h3 id="4-start-the-server">4. Start the server</h3>
+<ul>
+<li>Using a command prompt pointed at the directory <strong>networq-web</strong> run the server using:</li>
+</ul>
+<pre><code>    $ php -S 0.0.0.0:8080 -t public/</code></pre>
+<ul>
+<li>Open <a href="http://localhost:8080/">http://localhost:8080/</a> in a browser to start browsing the graph.</li>
+</ul>
+<h3 id="quick-start-with-example-data">Quick start with example data</h3>
+<p>Congratulations! You should now be able to browse the example nodes in the holacracy package.</p>
+<p><img src="/images/Holacracy1.PNG" alt="example nodes" /> </p>
+<h2 id="next-steps">Next Steps</h2>
+<p>A good next step is to take an <a href="concepts.html">abstract overview</a> of the components involved.</p>
+<p>To work with the data structure and learn more about the different components continue with this <a href="exampleholacracy.html">Holacracy</a> example.</p>
+<p>Or, create your <a href="first-graph.html">own graph</a> using existing packages. </p>
 <!-- CONTENT END -->
 
             </article>

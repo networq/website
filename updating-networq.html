@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="lazyload" lang="en">
     <head>
-        <title>index · Networq</title>
+        <title>updating-networq · Networq</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
                 <link rel="icon" type="image/png" href="/icon.png">
@@ -35,7 +35,7 @@
                 <input type="submit" value="➜">
             </form><div class="results"></div></div>
             <nav class="breadcrumbs">
-                <a href="/">Networq</a>
+                <a href="/">Networq</a> » <strong>updating-networq</strong>
             </nav>
         </header>
 
@@ -45,35 +45,41 @@
                 <template search-description></template>
 
 <!-- CONTENT START -->
-<h1 id="networq">NetworQ</h1>
-<h2 id="what-is-quotnetworqquot">What is &quot;NetworQ&quot;?</h2>
-<p>In technical terms: NetworQ is a <em>multi-dimensional graph</em> building platform.</p>
-<p>It is a cocktail of: Mindmaps, Business Methodologies, ERP, all wrapped up in a data-management tool.</p>
-<p>Use it to organize your business, team, project, assests, infrastructure, life and much more...</p>
-<h2 id="what-can-i-use-networq-for">What can I use NetworQ for?</h2>
-<p>We've collected a set of use-cases to inspire you <a href="use-cases/">here</a>. Your ingenuity and imagination is all that restricts further application. Check out our <a href="#">community forum</a> for more ideas.</p>
-<h2 id="a-3-layer-model">A 3 layer model</h2>
-<p>There are 3 layers to the data model of Networq. </p>
-<p><img src="/images/SummaryDataModel.PNG" alt="data model" /> </p>
-<p><em>Graphs</em> contain <em>Nodes</em>. <em>Nodes</em> get tagged with one or more <em>Types</em>.</p>
-<p><em>Types</em> give <em>Nodes</em> their <em>Properties</em>.</p>
-<p><em>Types</em> and <em>Nodes</em> can be bundled up into a <em>Package</em> to share it with others.</p>
-<p>You can import <em>Packages</em> from others to re-use their work in your own <em>Graphs</em>.</p>
-<p>For a more thorough explanation of these concepts, click <a href="concepts.html">here</a></p>
-<h2 id="what-packages-are-available">What packages are available?</h2>
-<p>Anybody can publish packages for Networq that you can import and re-use.</p>
-<p>The Networq project has published a range of packages you can use on <a href="https://github.com/networq">github.com/networq</a>.</p>
-<p>Some examples:</p>
+<h2 id="updating-networq-web">Updating NetworQ-web</h2>
+<h3 id="1-update-networkq-web">1. Update networkq-web</h3>
+<p>Set directory to networq-web and run command:</p>
+<pre><code>$ git pull</code></pre>
+<h3 id="2-update-the-dependencies-using-composer">2. Update the dependencies using Composer</h3>
+<p>Within the same networq-web directory run this command:</p>
+<pre><code>$ composer install # install / update latest dependencies</code></pre>
+<h2 id="updating-networq-cli">Updating NetworQ-cli</h2>
+<h2 id="1-updating-networq-cli">1. Updating networq-cli</h2>
+<p>Set directory to networq-cli:</p>
+<pre><code>$ git pull</code></pre>
+<h3 id="2-update-the-dependencies-using-composer-1">2. Update the dependencies using Composer</h3>
+<p>Within the same networq-cli directory run this command:</p>
+<pre><code>$ composer install # install / update latest dependencies</code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<!--- stay DRY where possible, maybe after getting started is approved and proofed copy through? --->
 <ul>
-<li><a href="https://github.com/networq/organization-package">Organization package</a></li>
-<li><a href="https://github.com/networq/requirement-package">Requirement package</a></li>
-<li><a href="https://github.com/networq/holacracy-package">Holacracy package</a></li>
-<li>...etc</li>
+<li>Follow <a href="getting-started.html#2-install-networq">2-4</a> of installing networq in getting started.</li>
 </ul>
-<h2 id="can-i-see-an-online-demo">Can I see an online demo?</h2>
-<p>Yes, check out our <a href="demo.html">demo page</a>.</p>
-<h2 id="can-i-run-networq-myself-and-start-using-it">Can I run Networq myself and start using it?</h2>
-<p>Yes, just follow our <a href="getting-started.html">getting started guide</a>.</p>
+<h2 id="test-your-success">Test your success</h2>
+<p>The end-goal is that you can type <code>networq</code> + enter and be presented with something like this:</p>
+<p><img src="/images/CommandsAvailable.PNG" alt="cli/Bin Path settings for Windows" /> </p>
+<p>&quot;Command not found&quot; suggests that there's still something that needs fixing on the PATH variable, or resetting/reloading the bash session.</p>
+<h2 id="if-you-relocate-networq-cli-then-update-the-path-environment">If you relocate networq-cli then update the PATH Environment</h2>
+<h3 id="windows">Windows</h3>
+<p>In the Windows control panel navigate to or search for &quot;advanced system settings&quot;</p>
+<p><img src="/images/PHP_Windows_VariablesSetings.PNG" alt="PHP Path settings for Windows" /> </p>
+<p>Select &quot;Environment Variables&quot;
+Navigate to the path settings for Windows and select &quot;Edit&quot;
+If there is an existing PATH for the cli\bin then verify it is correct.
+If not select Edit and browse to the correct location.
+If there is no current path select &quot;New&quot; and add the path, giving it an appropriate name.</p>
+<p><img src="/images/EditPathforCliBin.PNG" alt="cli/Bin Path settings for Windows" /> </p>
+<p>After updating your PATH variable, you'll usually need to restart your bash terminal application for the changes to take effect.</p>
+<h3 id="linuxmac">Linux/Mac</h3>
 <!-- CONTENT END -->
 
             </article>

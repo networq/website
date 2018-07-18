@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="lazyload" lang="en">
     <head>
-        <title>index · Networq</title>
+        <title>example-holacracy · Networq</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
                 <link rel="icon" type="image/png" href="/icon.png">
@@ -35,7 +35,7 @@
                 <input type="submit" value="➜">
             </form><div class="results"></div></div>
             <nav class="breadcrumbs">
-                <a href="/">Networq</a>
+                <a href="/">Networq</a> » <strong>example-holacracy</strong>
             </nav>
         </header>
 
@@ -45,35 +45,35 @@
                 <template search-description></template>
 
 <!-- CONTENT START -->
-<h1 id="networq">NetworQ</h1>
-<h2 id="what-is-quotnetworqquot">What is &quot;NetworQ&quot;?</h2>
-<p>In technical terms: NetworQ is a <em>multi-dimensional graph</em> building platform.</p>
-<p>It is a cocktail of: Mindmaps, Business Methodologies, ERP, all wrapped up in a data-management tool.</p>
-<p>Use it to organize your business, team, project, assests, infrastructure, life and much more...</p>
-<h2 id="what-can-i-use-networq-for">What can I use NetworQ for?</h2>
-<p>We've collected a set of use-cases to inspire you <a href="use-cases/">here</a>. Your ingenuity and imagination is all that restricts further application. Check out our <a href="#">community forum</a> for more ideas.</p>
-<h2 id="a-3-layer-model">A 3 layer model</h2>
-<p>There are 3 layers to the data model of Networq. </p>
-<p><img src="/images/SummaryDataModel.PNG" alt="data model" /> </p>
-<p><em>Graphs</em> contain <em>Nodes</em>. <em>Nodes</em> get tagged with one or more <em>Types</em>.</p>
-<p><em>Types</em> give <em>Nodes</em> their <em>Properties</em>.</p>
-<p><em>Types</em> and <em>Nodes</em> can be bundled up into a <em>Package</em> to share it with others.</p>
-<p>You can import <em>Packages</em> from others to re-use their work in your own <em>Graphs</em>.</p>
-<p>For a more thorough explanation of these concepts, click <a href="concepts.html">here</a></p>
-<h2 id="what-packages-are-available">What packages are available?</h2>
-<p>Anybody can publish packages for Networq that you can import and re-use.</p>
-<p>The Networq project has published a range of packages you can use on <a href="https://github.com/networq">github.com/networq</a>.</p>
-<p>Some examples:</p>
+<hr />
+<h2 id="status-draftspellcheckedauthor-masterbunnygmailcomeditor-jfaassenlinkorbcom">status: draft
+spellChecked:
+author: masterbunny@gmail.com
+editor: j.faassen@linkorb.com</h2>
+<h1 id="networq-data-structure">NetworQ Data Structure</h1>
+<p>The structure of the data managed by NetworQ falls within 3 categories:</p>
 <ul>
-<li><a href="https://github.com/networq/organization-package">Organization package</a></li>
-<li><a href="https://github.com/networq/requirement-package">Requirement package</a></li>
-<li><a href="https://github.com/networq/holacracy-package">Holacracy package</a></li>
-<li>...etc</li>
+<li>Graph</li>
+<li>Node</li>
+<li>Type</li>
 </ul>
-<h2 id="can-i-see-an-online-demo">Can I see an online demo?</h2>
-<p>Yes, check out our <a href="demo.html">demo page</a>.</p>
-<h2 id="can-i-run-networq-myself-and-start-using-it">Can I run Networq myself and start using it?</h2>
-<p>Yes, just follow our <a href="getting-started.html">getting started guide</a>.</p>
+<p><img src="/images/SummaryDataModel.png" alt="data model version H" /> </p>
+<p>By adding and removing types you reset the properties of the node. This means the system is responsive from the bottom up.</p>
+<h2 id="holacracy-and-networq">Holacracy and NetworQ</h2>
+<p><a href="https://www.holacracy.org/">Holocracy</a> is a institution organisation architecture. The process and philosophy of Hoacracy is one of flat management, providing teams with more autonomy. When an individual within an organisation is empowered to implement their own ideas, that organisation can flourish.</p>
+<p>The creators of NetworQ apply this agile structure within their own business. Which is why one of the first packages implemented was the Holacracy package. By installing and applying this you create a simple, dynamic system to self-manage the Holacracy framework. </p>
+<h1 id="holacracy-terminology">Holacracy Terminology</h1>
+<p>To be able to apply the principles of Holacracy, you must become familiar with some basic concepts integral to the philosophical framework.</p>
+<h2 id="running-examples">Running Examples</h2>
+<p>Remember you may configure the <code>NETWORQ_GRAPH</code> variable in the <code>.env</code>file to use any valid NetworQ package. Setting <code>NETWORQ_EXAMPLES=true</code> loads any example nodes found in the <code>examples/</code> directory of the root package. </p>
+<p>Refer to the <a href="getting-started.html">Getting Started Guide</a> before progressing through this example.</p>
+<p>For this guide we are examining and editing the <a href="https://github.com/networq/holacracy-package">Holacracy package</a>.</p>
+<h3 id="holacracy">Holacracy</h3>
+<p>Holacracy is a bare bones example of a NetworQ Package. It contains domain specific Types (Circle, Partner, Role).</p>
+<p>Graph- Circle
+Node- Partner
+Type- Role</p>
+<p><img src="https://github.com/favicon.ico" width="48"> Found a typo or error? <a href="https://github.com/networq/www.networq.io">Create a PR</a>.</p>
 <!-- CONTENT END -->
 
             </article>

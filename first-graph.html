@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="lazyload" lang="en">
+    <head>
+        <title>first-graph · Networq</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                <link rel="icon" type="image/png" href="/icon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share:400|Jaldi:400,700|Fira+Mono:400,700">
+        <link rel="stylesheet" href="/assets/base.css">
+        <link rel="stylesheet" href="/assets/lindoc.css">
+        <style>
+            a,.results strong{color:#d21}
+            button,input[type=submit],input[type=button],input[type=reset],.button,.search input[type=submit]{background-color:#d21}
+            .search input[type=text]:focus,.results,.results strong{border-color:#d21 !important}
+            @media screen and (min-width:1450px){.livetoc a.active{ color:#d21}}
+        </style>
+        <script>
+            // Parent Elements - e.P("body") - https://gist.github.com/moqmar/0995cf6595201f7a062fb173cb4ab938
+            (function(E){E.matches||(E.matches=E.matchesSelector||E.msMatchesSelector||E.webkitMatchesSelector)})(Element.prototype)
+            Element.prototype.P=function(s){var e=this
+            if(!s||typeof s=="number")for(var i=0;i<(s||1);i++)e=e?e.parentElement:e
+            else if(typeof s=="string")while(e&&!e.matches(s))e=e.parentElement
+            else while(e&&e!=s)e=e.parentElement
+            return e}
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="/"><img src="https://avatars3.githubusercontent.com/u/40381856?s=200&amp;v=4" alt="Networq"></a>
+            </h1>
+            <!-- THIS DOCUMENT IS INDEXED -->
+            <div class="search" role="search"><form data-baseurl="" onsubmit="search(this); return false;">
+                <input type="text" class="search-query" oninput="search(this.parentElement)" placeholder="Search...">
+                <input type="submit" value="➜">
+            </form><div class="results"></div></div>
+            <nav class="breadcrumbs">
+                <a href="/">Networq</a> » <strong>first-graph</strong>
+            </nav>
+        </header>
+
+        <main>
+            <aside class="toc"><ul></ul></aside>
+            <article>
+                <template search-description></template>
+
+<!-- CONTENT START -->
+<h1 id="create-your-first-graph">Create your first Graph</h1>
+<p><a href="getting-started.html">Getting Started</a> guides you through the installation of NetworQ. The terms used are covered in <a href="concepts.html">concepts</a>. Assuming that you are familiar with the terms, and have the setup completed, you are ready to create a Graph. A Graph is a container for one or more Packages and their contents, creating the functioning interface for your data.</p>
+<h2 id="worked-example">Worked example</h2>
+<p>This work-through will create an imaginary school headed by Barack Obama.</p>
+<h3 id="1-create-a-directory">1. Create a directory</h3>
+<p>The school name provides our package name; <code>old-skool-nqp</code>
+(following the convention to name a package with the tail &quot;NetworQ package&quot;: <code>nqp</code>).</p>
+<h3 id="2-create-the-yaml-package-file">2. Create the YAML package file</h3>
+<p>The <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> files in NetworQ are used as your data store, and for configuration. Create a YAML in your directory called package.yaml.</p>
+<p><img src="/images/createYaml.PNG" alt="Create YAML" /> </p>
+<h3 id="3-populate-the-yaml-relevant-details">3. Populate the YAML relevant details</h3>
+<p>For example:</p>
+<ul>
+<li>name</li>
+<li>description</li>
+<li>license</li>
+</ul>
+<h3 id="4-set-up-dependencies">4. Set up dependencies</h3>
+<p>The ability to use existing packages is a key functionality of NetworQ. For the sake of brevity, this example will use a minimal dependency list. A real Graph may adopt many packages.</p>
+<ul>
+<li>Complete as shown:</li>
+</ul>
+<pre><code class="language-yaml">name: old-skool:organization
+description: Old Skool Organization Graph
+license: MIT
+dependencies:
+networq:core: latest # essential
+networq:resource: latest
+networq:organization: latest
+networq:linkedin: latest
+networq:skype: latest
+networq:contract: latest</code></pre>
+<ul>
+<li>Set directory to old-skool-nqp and run the command <code>networq install</code>.</li>
+</ul>
+<h3 id="5-configure-networq-to-run-your-package">5. Configure NetworQ to run your package</h3>
+<!-- This section is repetition from getting started - need a DRY methodology applied here --->
+<p>Using the directory containing your old skool package, following <a href="getting-started.html#apply-a-package">2-4</a> of Applying a Package in Getting Started.
+5.1) <a href="getting-started.html#2-install-networq">set up the dependencies</a>.
+5.2) <a href="getting-started.html#3-configure-networq">configure NetworQ</a> to use this old-skool-nqp as the local package.
+5.3) <a href="getting-started.html#4-start-the-server">start the server</a>.</p>
+<p>Success will look something like this:
+<img src="/images/FG_BaseSystem1.PNG" alt="My First Graph Example Skool" /></p>
+<h3 id="6-git-ignore">6. Git Ignore</h3>
+<p>NetworQ installed dependent packages into a package directory. Rather than push these back to git hub it is best to set up a git ignore. In the old-skool-nqp directory, set up a git ignore file for the packages directory:
+<code>packages/</code>.</p>
+<h3 id="7-create-your-first-entity">7. Create your first entity</h3>
+<h4 id="71-create-a-directory-called">7.1 Create a directory called <code>nodes</code>.</h4>
+<h4 id="72-create-nodes-to-describe-our-first-entity-barack-obama">7.2 Create nodes to describe our first entity: Barack Obama.</h4>
+<!-- NB this flow does not include creation of types- this must be dealt with in another flow --->
+<p>Barack Obama will be the head teacher for our imaginary school. That concept requires 3 nodes within our package.</p>
+<p>Barack is an individual. Management is a group and School is an organization. The management and organisation nodes are inherited from existing packages and so provide various types.</p>
+<p>Creating these nodes may be achieved by applying the following techniques:</p>
+<ul>
+<li>Creating 3 YAML files in the nodes directory. </li>
+</ul>
+<p><img src="/images/FG_3Nodes3YAML.PNG" alt="3 nodes, 3 YAML files" />.</p>
+<ul>
+<li>Or by running a local instance of networq-web and browsing via localhost. The <code>New Node</code> button provides this functionality:</li>
+</ul>
+<p><img src="/images/FG_CreatingNodeInterface.PNG" alt="Create a new node" /></p>
+<h4 id="73-populate-the-yaml-node-files">7.3 Populate the YAML Node files</h4>
+<ul>
+<li>
+<p>old-skool.yaml</p>
+<ul>
+<li>This YAML must describe the organization</li>
+<li>Complete as shown:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-yaml">networq:core:node:
+name: Old Skool
+  description: This is the Old Skool organization
+networq:organization:organization: ~
+networq:organization:group: ~</code></pre>
+<ul>
+<li>
+<p>management.yaml</p>
+<ul>
+<li>This YAML must describe the management group</li>
+<li>Complete as shown:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-yaml">
+networq:core:node:
+name: Management group
+networq:organization:group:
+  parentGroup: old-skool:organization:old-skool
+</code></pre>
+<ul>
+<li>
+<p>barack-obama.yaml</p>
+<ul>
+<li>This YAML must describe Barack Obama and his position in the school</li>
+<li>Complete as shown:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-yaml">  networq:core:node:
+  name: Barack Obama
+  image: (enter URL)
+networq:organization:member:
+  memberships:
+    barack-obama-management:
+      networq:organization:membership:
+        group: old-skool:organization:management
+        member: old-skool:organization:barack-obama
+        focus: Head teacher</code></pre>
+<h3 id="8-create-your-second-entity">8. Create your second entity</h3>
+<p>To reinforce the concept, and introduce some shortcodes, let's give the school a teacher. Sarah Palin will be our Head of Mathematics and Barack Obama's assistant head. Sarah will, therefore, belong to more than one group, the management group, and the teaching group.</p>
+<h4 id="81-create-the-nodes-for-your-entity">8.1 Create the nodes for your entity</h4>
+<p>The management group already exists for Sarah to join however, we need to create a teaching group. The teaching group, as per a traditional school hierachy, sits under the management group.</p>
+<ul>
+<li>
+<p>teaching.yaml</p>
+<ul>
+<li>This YAML must describe the teaching group</li>
+<li>Complete as shown:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-yaml">networq:core:node:
+name: Teaching group
+networq:organization:group:
+  parentGroup: old-skool:organization:management</code></pre>
+<ul>
+<li>
+<p>sarah-palin.yaml</p>
+<ul>
+<li>This YAML must describe Sarah Palin and her position within the school</li>
+<li>Complete as shown:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-yaml">networq:core:node:
+  name: Sarah Palin
+  image: (enter URL)
+networq:organization:member:
+  memberships:
+    ~teaching:
+      networq:organization:membership:
+        group: old-skool:organization:teaching
+        member: $
+        focus: Math
+    ~management:
+      networq:organization:membership:
+        group: old-skool:organization:management
+        member: $
+        focus: Head of Math</code></pre>
+<p>Notice the use of $ here as shortcode to apply the document name. Similarly [] signifies many.
+networq:organization:membership[], for example, denotes multiple memberships.</p>
+<h2 id="congratulations">Congratulations</h2>
+<p>You have created your first graph and applied some of the basic concepts involved in making use of existing packages. This system may be used for myriad purposes. One of the early applications developed is for institutional management applying the <a href="https://github.com/networq/holacracy-nqp">Holacracy</a> architecture.</p>
+<p><img src="https://github.com/favicon.ico" width="48"> Found a typo or error? <a href="https://github.com/networq/www.networq.io">Create a PR</a>.</p>
+<!-- CONTENT END -->
+
+            </article>
+        </main>
+
+        <script src="/assets/toc.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script>Prism.plugins.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/";</script>
+        <link rel="stylesheet" href="/assets/prism.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/js-search@1.4.2/dist/umd/js-search.min.js"></script>
+        <script src="/assets/search.js"></script>
+    </body>
+</html>

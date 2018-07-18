@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="lazyload" lang="en">
+    <head>
+        <title>windows10 · Networq</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                <link rel="icon" type="image/png" href="/icon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share:400|Jaldi:400,700|Fira+Mono:400,700">
+        <link rel="stylesheet" href="/assets/base.css">
+        <link rel="stylesheet" href="/assets/lindoc.css">
+        <style>
+            a,.results strong{color:#d21}
+            button,input[type=submit],input[type=button],input[type=reset],.button,.search input[type=submit]{background-color:#d21}
+            .search input[type=text]:focus,.results,.results strong{border-color:#d21 !important}
+            @media screen and (min-width:1450px){.livetoc a.active{ color:#d21}}
+        </style>
+        <script>
+            // Parent Elements - e.P("body") - https://gist.github.com/moqmar/0995cf6595201f7a062fb173cb4ab938
+            (function(E){E.matches||(E.matches=E.matchesSelector||E.msMatchesSelector||E.webkitMatchesSelector)})(Element.prototype)
+            Element.prototype.P=function(s){var e=this
+            if(!s||typeof s=="number")for(var i=0;i<(s||1);i++)e=e?e.parentElement:e
+            else if(typeof s=="string")while(e&&!e.matches(s))e=e.parentElement
+            else while(e&&e!=s)e=e.parentElement
+            return e}
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="/"><img src="https://avatars3.githubusercontent.com/u/40381856?s=200&amp;v=4" alt="Networq"></a>
+            </h1>
+            <!-- THIS DOCUMENT IS INDEXED -->
+            <div class="search" role="search"><form data-baseurl="" onsubmit="search(this); return false;">
+                <input type="text" class="search-query" oninput="search(this.parentElement)" placeholder="Search...">
+                <input type="submit" value="➜">
+            </form><div class="results"></div></div>
+            <nav class="breadcrumbs">
+                <a href="/">Networq</a> » <a href="/prerequisites/">prerequisites</a> » <a href="/prerequisites/windows/">windows</a> » <strong>windows10</strong>
+            </nav>
+        </header>
+
+        <main>
+            <aside class="toc"><ul></ul></aside>
+            <article>
+                <template search-description></template>
+
+<!-- CONTENT START -->
+<h2 id="windows-10-prerequisites-run-through">Windows 10 prerequisites run through</h2>
+<p>To set up a Windows 10 machine to run NetworQ, use the following guide.</p>
+<h3 id="1-install-git">1. Install Git</h3>
+<p><a href="https://git-scm.com/download/win">Git Installer for Windows</a>
+Download and run the executable.
+This provides you with Git bash to use as a command line. </p>
+<h3 id="2-install-the-php-runtime">2. Install the PHP Runtime</h3>
+<p>Use the <a href="http://php.net/downloads.php">latest version</a>
+Select the &quot;Windows downloads&quot;.
+This will download a zip file which should be extracted to a folder such as <code>C:\PHP7</code>.</p>
+<p>2a) The <code>PHP.ini</code> file does not come ready to use, out of the box. </p>
+<p>Select either one of these files:</p>
+<p><img src="/images/PHP_ini_2FilesToEdit.PNG" alt="PHP.ini rename for Windows" /> </p>
+<p>and rename your choice to <code>PHP.ini</code></p>
+<p>2b) Removing the semicolon uncomments the code in the PHP.ini files. </p>
+<p>Identify and turn on the switch:</p>
+<pre><code>extention_dir = "ext"</code></pre>
+<p>by deleting the semicolon and saving the file.</p>
+<p><img src="/images/PHP_ini_WindowsSwitch.PNG" alt="PHP.ini edit for Windows" /> </p>
+<p>Removing the &quot;;&quot; uncomments the setting.</p>
+<p>2c) In the same way switch:</p>
+<pre><code>extension=openssl </code></pre>
+<p>to active, by deleting the semicolon and saving your change.</p>
+<p>2d) In the same way switch:</p>
+<pre><code>extension=mbstring </code></pre>
+<p>to active, by deleting the semicolon and saving your change.</p>
+<p>2e) Now add the PHP runtime to the Windows Path.</p>
+<p>In the Windows control panel navigate to or search for &quot;advanced system settings&quot;</p>
+<p><img src="/images/PHP_Windows_VariablesSetings.PNG" alt="PHP Path settings for Windows" /> </p>
+<p>Select &quot;Environment Variables&quot;
+Navigate to the path settings for Windows and select &quot;Edit&quot; if there is an existing PHP path, otherwise, &quot;New&quot;.</p>
+<p>Browse to your PHP runtime location (the folder where you unzipped to), and add that to the environment variable path. If you have older PHP version &quot;Edit&quot; will replace the outdated path.</p>
+<p><img src="/images/PHP_Windows_VariablesSetings2.PNG" alt="Browse your PHP Path" /> </p>
+<p>Add the path settings to the Windows environment.</p>
+<h3 id="3-install-composer">3) Install composer</h3>
+<p>Download Composer as an <a href="https://getcomposer.org/doc/00-intro.html">executable</a>.
+Run the .exe to install.</p>
+<h2 id="run-some-checks">Run some checks</h2>
+<p>It is a good idea to check that your setup attempts are working.</p>
+<h3 id="php-check">PHP check</h3>
+<p>In a command window run:</p>
+<pre><code>$ php --ini</code></pre>
+<p>To see the path for the php.ini file that the system is using.</p>
+<h3 id="composer-check">Composer check</h3>
+<p>In a command window run:</p>
+<pre><code>$ composer -v</code></pre>
+<p>The response should look something like this:</p>
+<p><img src="/images/CheckYourComposerVersion.PNG" alt="Verify Composer Install" /> </p>
+<h2 id="congratulations-you-are-ready-to-run-networq-on-your-windows-machine">Congratulations, you are ready to run NetworQ on your windows machine</h2>
+<p>Return to the main <a href="/getting-started.md">Set Up</a> flow.</p>
+<!-- CONTENT END -->
+
+            </article>
+        </main>
+
+        <script src="/assets/toc.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script>Prism.plugins.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/";</script>
+        <link rel="stylesheet" href="/assets/prism.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/js-search@1.4.2/dist/umd/js-search.min.js"></script>
+        <script src="/assets/search.js"></script>
+    </body>
+</html>

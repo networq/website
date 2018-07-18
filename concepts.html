@@ -45,32 +45,57 @@
                 <template search-description></template>
 
 <!-- CONTENT START -->
+<hr />
+<h2 id="id-conceptsstatus-draftauthor-jfaassenlinkorbcomeditor-masterbunnygmailcomspellchecked">id: concepts
+status: draft
+author: j.faassen@linkorb.com
+editor: masterbunny@gmail.com
+spellChecked: </h2>
 <h1 id="concepts">Concepts</h1>
-<p>Networq uses a few concepts you need to understand in order to build your own graphs.
-Below you'll find definitions for Networq's terms:</p>
+<p>NetworQ uses a few concepts you need to understand in order to build your own graphs. An example organisation &quot;old-skool&quot;, an imaginary School with students, teachers, suppliers, parents etc. serves as a model for this explanation.</p>
+<h2 id="naming-convention">Naming convention</h2>
+<p>Note the naming convention applied throughout NetworQ packages is <a href="http://wiki.c2.com/?KebabCase">kebab-casing</a>. </p>
 <h2 id="node">Node</h2>
-<p>All data in Networq is a &quot;Node&quot;. A node has a name (i.e. <code>mario</code>). Every node is part of a package (i.e. <code>acme:example</code>). The node name and the package name combined give a Fully Qualified Node Name (FQNN) (i.e. <code>acme:example:mario</code>).</p>
-<p>Other than the name/fqnn, a node doesn't have any properties of it's own. A Node can be tagged with one or more Types, which give the node it's available properties. For example, tagging the <code>acme:example:mario</code> node with the <code>acme:example:character</code> type allows you to specify the <code>debut</code> field for Mario, linking it to the game that Mario debuted in.</p>
+<p>All data in NetworQ is contained within a &quot;node&quot;. A node has a name, for example our School has an IT supplier called <code>soltech-it</code>. Every node is part of a package, our School's package is <code>old-skool:school</code>. </p>
+<p><img src="/images/ConceptsSlide2.PNG" alt="Node Naming" /> </p>
+<p>The node name and the package name combined give a Fully Qualified Node Name (FQNN), in this case <code>old-skool:school:soltech-it</code>. Thus, this supplier now exists as an entity. Other than the having its own unique identifier, its FQNN, a node doesn't have any other properties of it's own. </p>
+<p>By tagging a node with one or more &quot;Types&quot;, the node is given properties. </p>
 <h2 id="types">Types</h2>
-<p>A &quot;Type&quot; defines what properties a Node can have. A type has a name (i.e. <code>vegetable</code>) and is part of a package (i.e. <code>acme:food</code>). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. <code>acme:food:vegetable</code>).</p>
-<p>Types are defined by creating <code>.yaml</code> files in the <code>types/</code> directory of a package. They are automatically loaded when the package is loaded.</p>
-<p>Types optionally define a list of Fields for the type. Only nodes tagged with this type will have the listed fields.</p>
+<p>A &quot;Type&quot; defines what properties a node can have. For example, tagging the <code>old-skool:school:soltech-it</code> node with the <code>supplier:management:contracts</code> type allows you to specify the field <code>contract-end-date</code> for <code>soltech-it</code>, allowing the contract agreement end date to be linked to that supplier.</p>
+<p>Notice that our organisation OldSkool has reached out to use a type held within a different package (<code>supplier:management</code>). Now that the node SoltechIT is associated with this type all the architecture that comes with this type is now linked to the node. This means that every aspect of supplier management provided by this package, is now available to the School to use.</p>
+<h2 id="type-names">Type Names</h2>
+<p>A type has a name (i.e. <code>contracts</code>) and is part of a package (i.e. <code>supplier:managment</code>). Combining the Type name and Package Name gives you a Fully Qualified Type Name (FQTN) (i.e. <code>supplier:management:contracts</code>).</p>
+<!-- I assume the above is correct supplier:management:contracts - Rather than the image below School:OldSkool:SupplierContracts - i.e. Name is fixed to original package --->
+<p><img src="/images/ConceptsSlide3.PNG" alt="Type Naming" /> </p>
+<h2 id="managing-types">Managing Types</h2>
+<p>Types are defined by creating <code>.yaml</code> files in the <code>types/</code> directory of a package. These are loaded with the package.</p>
+<p>Types optionally define a list of Fields for the type. </p>
+<!-- Types can also be objects held within the database - yes?--->
+<p>Nodes tagged with this type will then adopt the listed fields.</p>
+<p><img src="/images/ConceptsSlide4.PNG" alt="Graphs link Packages" /> </p>
 <p>A Field can be either a <code>string</code> (simple text), or a FQTN. When you specify a FQTN for a Field, you
 can only assign nodes that are tagged with this type.</p>
 <p>A Field can be a single value (default), or a list of values (by appending [] to the end of the Field type definition).</p>
+<p><img src="/images/TypesFields.PNG" alt="Fields with single and multiple values" /> </p>
 <h2 id="tags">Tags</h2>
 <p>A &quot;Tag&quot; is simply the link between a Node and a Type. One Node can contain multiple Tags.</p>
 <h2 id="package">Package</h2>
 <p>A &quot;Package&quot; is a reusable set of Types and Nodes. Packages can be shared and live in their own Git Repository.</p>
 <p>A Package defines Types (in the package's <code>types/</code> directory) using YAML files.</p>
-<p>A Package can optionally define a set of <code>Nodes</code>. Nodes in packages are therefor also reusable and lets you share reference data or standardized lists (like countries, operating systems, etc).</p>
+<p>A Package can optionally define a set of <code>Nodes</code>. Nodes in packages are therefore, are also reusable allowing you to share reference data or standardized lists (like countries, operating systems, etc.).</p>
 <p>A Package can optionally define <code>Widgets</code>, which are simple HTML templates (in the <code>templates/</code> directory) which get injected into the User Interface when a user is viewing a Node of a given Type.</p>
-<p>A Package always has a <code>package.yaml</code> file in the root of it's repository.
-The <code>package.yaml</code> file defines the Package's name, description, license etc. And lists an optional set
+<p>A Package always has a <code>package.yaml</code> file in the root of it's repository. The <code>package.yaml</code> file defines the Package's name, description, license etc. And lists an optional set
 of dependencies: other packages that this package depends on.</p>
 <h2 id="graph">Graph</h2>
 <p>When using Networq, you'll almost always interact with a &quot;Graph&quot;. A Graph is a container for one or more Packages and their contents (Nodes, Types, Widgets).</p>
-<p>A Graph always has exactly 1 &quot;Root Package&quot; which is the main package of your project. Additionally the graph recursively loads and holds all packages that a parent package has a dependency on.</p>
+<p>A Graph always has exactly 1 &quot;Root Package&quot; which is the main package of your project. For our example this is School:OldSkool. Additionally the graph recursively loads and holds all packages that a parent package has a dependency on. </p>
+<p><img src="/images/ConceptsSlide5.PNG" alt="Graphs link Packages" /> </p>
+<h2 id="dependencies">Dependencies</h2>
+<p>For our example we added the Supplier Contract Types that comes as part of the Supplier:Management package, however an institution as complicated as a school will pull in many packages and their dependents.</p>
+<p>When one package requires/builds on another, it is called a “Dependency”. Package A depends on Package B. Each package defines it’s own dependencies so that when the package is installed, it’s required dependencies are also automatically installed.</p>
+<p><img src="/images/ConceptsSlide6.PNG" alt="Packages may depend upon other Packages" /></p>
+<p>For example, the &quot;StudentBody&quot; package would need to hold fields within the type such as student home address. By making use of an existing postal system address package for the country the School is based in, school adminstrators can find each student's full address including post code (zip code), in the address package. </p>
+<p>Similarly the GDPR package may be applied to the parent body, student body, staff and suppliers.</p>
 <!-- CONTENT END -->
 
             </article>
