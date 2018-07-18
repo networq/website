@@ -2,23 +2,27 @@
 id: index
 ---
 
-# Networq
+# NetworQ
 
-## What is "Networq"?
+## What is "NetworQ"?
 
-In technical terms: Networq is a *multi-dimensional graph* building platform.
+In technical terms: NetworQ is a *multi-dimensional graph* building platform.
 
-Think of it as a cocktail of Mindmaps, Business Methodologies, ERP.
+It is a cocktail of: Mindmaps, Business Methodologies, ERP, all wrapped up in a data-management tool.
 
-You can use these graphs to organize your business, team, project, infrastructure, life and much more...
+Use it to organize your business, team, project, assests, infrastructure, life and much more...
 
-## What can I use Networq for?
+## What can I use NetworQ for?
 
-Quite a lot actually! We've collected a set of use-cases to inspire you [here](use-cases/).
+We've collected a set of use-cases to inspire you [here](use-cases/). Your ingenuity and imagination is all that restricts further application. Check out our [community forum](#) for more ideas.
 
-## How does it work?
+## A 3 layer model
 
-Using Networq you build *Graphs*. *Graphs* contain *Nodes*. *Nodes* get tagged with one or more *Types*.
+There are 3 layers to the data model of Networq. 
+
+![data model](/images/SummaryDataModel.PNG) 
+
+*Graphs* contain *Nodes*. *Nodes* get tagged with one or more *Types*.
 
 *Types* give *Nodes* their *Properties*.
 
