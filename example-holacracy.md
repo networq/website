@@ -1,10 +1,9 @@
 
 ---
-draft: True
-spellChecked: F
+status: draft
+spellChecked: 
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
-notes:  - Priority doc. 
 ---
 
 # NetworQ Data Structure

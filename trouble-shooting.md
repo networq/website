@@ -1,10 +1,10 @@
-
 ---
-draft: True
-spellChecked: F
+status: draft
+spellChecked: 
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
-notes: - This is a fairly ad-hoc document. A compile bin of issues that may need full documentation at some point.
+notes: 
+    - This is a fairly ad-hoc document. A compile bin of issues that may need full documentation at some point.
 ---
 
 
@@ -45,7 +45,7 @@ A screen such as this is expected when there are no Graphs available to display 
 On the directory networq-web you may run the server using:
 
 ```
-    $ php -S 0.0.0.0:8080 -t public/
+$ php -S 0.0.0.0:8080 -t public/
 ```
 
 Open http://localhost:8181/ in a browser to start browsing the graph.
@@ -53,9 +53,9 @@ Open http://localhost:8181/ in a browser to start browsing the graph.
 If this does not work try:
 
 ```
-	$ php -S localhost:54321 -t public/
-
+$ php -S localhost:54321 -t public/
 ```
+
 Open http://localhost:54321 in a browser to start browsing the graph.
 
 ### Other issues
@@ -64,11 +64,13 @@ Open http://localhost:54321 in a browser to start browsing the graph.
 ![Needs write up](/images/TS_composerFail.PNG) 
 ![Needs write up](/images/TS_ComposerFail_PoorPHPLibSet.PNG) 
 
-
 Or this one:
 
-[1:58 PM] Joost Faassen: rm symfony.lock
-[1:58 PM] Joost Faassen: git checkout symfony.lock
+```
+$ rm symfony.lock
+$ git checkout symfony.lock
+```
+
 ![Needs write up](/images/TS_SyncErrorSymfony.PNG)
 
 <img src="https://github.com/favicon.ico" width="48"> Found a typo or error? [Create a PR](https://github.com/networq/www.networq.io).

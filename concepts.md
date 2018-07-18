@@ -1,20 +1,19 @@
 
 ---
-draft: True
+id: concepts
+status: draft
 author: j.faassen@linkorb.com
 editor: masterbunny@gmail.com
-spellChecked: F
-notes:  - Priority doc. Edits required for naming conventions- NB "node, type and package names, i've been sticking to "kebab-casing", so instead of OldSchool it'd be old-school" AND the naming needs to follow the example school created by Joost.
-id: concepts
+spellChecked: 
 ---
 
 # Concepts
 
 NetworQ uses a few concepts you need to understand in order to build your own graphs. An example organisation "old-skool", an imaginary School with students, teachers, suppliers, parents etc. serves as a model for this explanation.
 
-## Naming Convention
+## Naming convention
 
-Note the naming convention applied throughout NetworQ packages created by LinkOrb is [kebab-casing](http://wiki.c2.com/?KebabCase). 
+Note the naming convention applied throughout NetworQ packages is [kebab-casing](http://wiki.c2.com/?KebabCase). 
 
 ## Node
 

@@ -1,10 +1,8 @@
-
 ---
-draft: True
+status: published
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
-spellChecked: Y
-notes:  - Priority doc. Part of Task 1
+spellChecked: 2018-07-17
 ---
 
 # Create your first Graph
@@ -29,7 +27,8 @@ The [YAML](https://en.wikipedia.org/wiki/YAML) files in NetworQ are used as your
 
 ### 3. Populate the YAML relevant details 
 
-For example: 
+For example:
+
 * name
 * description
 * license
@@ -40,28 +39,29 @@ The ability to use existing packages is a key functionality of NetworQ. For the 
 
 * Complete as shown:
 
-  ```yaml
-  name: old-skool:organization
-	description: Old Skool Organization Graph
-	license: MIT
-	dependencies:
-  networq:core: latest # essential
-  networq:resource: latest
-  networq:organization: latest
-  networq:linkedin: latest
-  networq:skype: latest
-  networq:contract: latest
-  ```
+```yaml
+name: old-skool:organization
+description: Old Skool Organization Graph
+license: MIT
+dependencies:
+networq:core: latest # essential
+networq:resource: latest
+networq:organization: latest
+networq:linkedin: latest
+networq:skype: latest
+networq:contract: latest
+```
+
 * Set directory to old-skool-nqp and run the command `networq install`.
 
 ### 5. Configure NetworQ to run your package
 
 <!-- This section is repetition from getting started - need a DRY methodology applied here --->
 
-Using the directory containing your old skool package, following [2-4](getting-started.md#Apply-a-Package) of Applying a Package in Getting Started.
-5.1) [set up the dependencies](getting-started.md#2.-Install-NetworQ).
-5.2) [configure NetworQ](getting-started.md#3.-Configure-NewtorQ) to use this old-skool-nqp as the local package. 
-5.3) [start the server](getting-started.md#4.-Start-the-server).
+Using the directory containing your old skool package, following [2-4](getting-started.md#apply-a-package) of Applying a Package in Getting Started.
+5.1) [set up the dependencies](getting-started.md#2-install-networq).
+5.2) [configure NetworQ](getting-started.md#3-configure-networq) to use this old-skool-nqp as the local package. 
+5.3) [start the server](getting-started.md#4-start-the-server).
 
 Success will look something like this:
 ![My First Graph Example Skool](/images/FG_BaseSystem1.PNG)

@@ -29,7 +29,7 @@ There are a number of options available for those interested:
 
 As NetworQ develops and grows there will be many useful packages available. For now, here are some of the highlights:
 
-[Holocracy](//github.com/networq/holacracy-package)
+[Holocracy](//github.com/networq/holacracy-nqp)
 [GDPR](https://github.com/networq/gdpr-nqp)
 [LinkedIn](https://github.com/networq/linkedin-nqp)
 

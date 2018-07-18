@@ -1,10 +1,8 @@
-
 ---
-draft: True
+status: published
 author: masterbunny@gmail.com
 editor: j.faassen@linkorb.com
-spellChecked: T
-notes:  - Priority doc, can't get second local host to render on gh as sub-bullet (!)
+spellChecked: 2018-07-17
 ---
 
 # Getting started
@@ -35,7 +33,7 @@ Two items are required:
 	- inspect graphs (list packages, types, nodes)
 	- install package dependencies
 
-### 1. Install NetowrQ Web
+### 1. Install NetworQ Web
 
 To install, use a command prompt to run:
 
@@ -51,30 +49,28 @@ To install, use a command prompt to run:
 Next, install the command-line utilities + package manager. Choose a suitable directory location and use a command prompt to run:
 
 ```
-  $ git clone https://github.com/networq/networq-cli
-  $ cd networq-cli
-  $ composer install
-
+$ git clone https://github.com/networq/networq-cli
+$ cd networq-cli
+$ composer install
 ```
 
 ## Apply a Package
 
-A NetworQ package must exist. For this example, we will use the [Holacracy Package](https://github.com/networq/holacracy-package).
+A NetworQ package must exist. For this example, we will use the [Holacracy Package](https://github.com/networq/holacracy-nqp).
 
 ### 1. Clone the package
 
 Clone the package from Git using a command window directed at the folder location you want to store the clone in:
 
 ```
-$ git clone https://github.com/networq/holacracy-package
-
+$ git clone https://github.com/networq/holacracy-nqp
 ```
 
 ### 2. Install NetworQ
 
 Install NetworQ to run this package. 
 
-Change directory of the command window, to the folder containing your package, in this example the holacracy-package and run `networq install`.
+Change directory of the command window, to the folder containing your package, in this example the holacracy-nqp and run `networq install`.
 
 The installation will create a directory "packages" and import all the dependency packages for your Graph.
         
@@ -93,27 +89,23 @@ $ edit .env # Adjust for your setup
 
 * Define the settings via the command prompt:
 
-```
-ini
-NETWORQ_GRAPH=C:\Users\ExampleUser\Documents\GitHub\holacracy-package
+```ini
+NETWORQ_GRAPH=/path/to/holacracy-nqp
 NETWORQ_EXAMPLES=true
-
 ```
-* Or edit the file directly. Browse to the file:
 
+* Or edit the file directly. Browse to the file:
 
 ![edit .env](/images/edit_envWin.PNG) 
 
-	- Set the value of NETWORQ_GRAPH to the folder containing the package.
-	- Set the NETWORQ_EXAMPLES to true.
-	- Save and close the file.
+- Set the value of NETWORQ_GRAPH to the folder containing the package.
+- Set the NETWORQ_EXAMPLES to true.
+- Save and close the file.
 
 
 ![edit .env](/images/Install4_Holacracy.PNG) 
 
 Setting `NETWORQ_EXAMPLES=true` loads any example nodes found in the `examples/` directory of the root package.
-
-
 
 ### 4. Start the server
 
@@ -122,15 +114,8 @@ Setting `NETWORQ_EXAMPLES=true` loads any example nodes found in the `examples/`
 ```
     $ php -S 0.0.0.0:8080 -t public/
 ```
+
 * Open http://localhost:8080/ in a browser to start browsing the graph.
-
-	- As ports may be pre-assigned you may use this alternative:
-
-```
-    $ php -S localhost:54321 -t public/
-
-```
-  - Open http://localhost:54321 in a browser to start browsing the graph.
 
 ### Quick start with example data
 
@@ -139,7 +124,6 @@ Congratulations! You should now be able to browse the example nodes in the holac
 
 ![example nodes](/images/Holacracy1.PNG) 
 
-
 ## Next Steps
 
 A good next step is to take an [abstract overview](concepts.md) of the components involved.
@@ -147,12 +131,6 @@ A good next step is to take an [abstract overview](concepts.md) of the component
 To work with the data structure and learn more about the different components continue with this [Holacracy](exampleHolacracy.md) example.
 
 Or, create your [own graph](first-graph.md) using existing packages. 
-
-<img src="https://github.com/favicon.ico" width="48"> Found a typo or error? [Create a PR](https://github.com/networq/www.networq.io).
-
-
-
-
 
 
 
